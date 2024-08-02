@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>პითონის გაკვეთილები</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #0056b3;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+        }
+
+        .slideshow-container {
+            position: relative;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .mySlides {
+            display: none;
+            padding: 20px;
+            background-color: #fff;
+            border: 2px solid #0056b3;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            margin-bottom: 20px;
+            transition: transform 0.5s ease, opacity 0.5s ease;
+        }
+
+        .active {
+            display: block;
+        }
+
+        .button {
+            background-color: #0056b3;
+            color: white;
+            padding: 10px 20px;
+            margin: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .button:hover {
+            background-color: #004494;
+            transform: scale(1.05);
+        }
+
+        .navigation {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+
+        pre {
+            background-color: #e9ecef;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>პითონის გაკვეთილები</h1>
+
+    <div class="slideshow-container">
+        <div class="mySlides">
+            <h2>გაკვეთილი 1: პითონის შესავალი</h2>
+            <p>პითონი არის მაღალი დონეების, ინტერპრეტირებული პროგრამირების ენა, ცნობილი თავისი სიმარტივით და წვდომით. იგი შექმნა გიდო ვან რასუმმა 1991 წელს, და დღეს ის ფართოდ გამოიყენება ვებსაიტების, აპლიკაციების, მონაცემთა მეცნიერების და მექანიკური სწავლებების წარმოებაში.</p>
+            <p>ამ გაკვეთილში თქვენ შეისწავლით:</p>
+            <ul>
+                <li><strong>პითონის ისტორია:</strong> პითონი არის ორი ძირითადი ვერსია: Python 2 და Python 3. Python 3 არის თანამედროვე და უფრო მძლავრი ვერსია, რომელიც აქტიურად გამოიყენება. იგი მუდმივად განახლდება ახალი ფუნქციებით.</li>
+                <li><strong>ინსტალაცია და კონფიგურაცია:</strong> თუ თქვენ არ გაქვთ პითონი თქვენი სისტემაში, შეგიძლიათ გადმოწეროთ ის ოფიციალური ვებსაიტიდან (https://www.python.org/downloads/). ინსტალაციის შემდეგ, თქვენ შეგიძლიათ შეამოწმოთ პითონის ვერსია ტერმინალში ან კომანდ პრომპტში ჩაწერით <code>python --version</code>.</li>
+                <li><strong>ფუნდამენტური სინტაქსი:</strong> პითონი არის კოდირების ენა, რომელიც ყურადღებას აქცევს გასReadable-ს. მაგალითად, თქვენ შეგიძლიათ შექმნათ უბრალო პროგრამა, რომ შეიტანოთ ტექსტი, ხოლო შემდეგ მიაწვდოთ იგი ეკრანზე:</li>
+                <pre>
+print("გამარჯობა, მსოფლიო!")
+                </pre>
+                <li><strong>მონაცემთა ტიპები:</strong> პითონში რამდენიმე ძირითადი მონაცემთა ტიპია, მათ შორის:</li>
+                <ul>
+                    <li><code>int</code> - მთელი რიცხვები</li>
+                    <li><code>float</code> - მიტინგი</li>
+                    <li><code>str</code> - ტექსტური სტრიქონები</li>
+                    <li><code>bool</code> - ლოგიკური ტიპები (True / False)</li>
+                </ul>
+                <li><strong>ცვლადები:</strong> ცვლადები არის სახელები, რომლებიც აღჭურვილი არიან მონაცემების შესანახად. მაგალითად:</li>
+                <pre>
+x = 5
+y = "გამარჯობა"
+                </pre>
+            </ul>
+        </div>
+
+        <div class="mySlides">
+            <h2>გაკვეთილი 2: კონტროლის სტრუქტურები</h2>
+            <p>კონტროლის სტრუქტურები გაწვდიან თქვენს პროგრამების შესრულების ნაკადს. ისინი იყენებენ ლოგიკურ პირობებს, რათა გადაწყვიტონ, რომელდეკის ნაწილები უნდა შესრულდეს. ეს საშუალებას გაწვდეთ განსხვავებული მოქმედებების განხორციელება განსხვავებულ პირობებში.</p>
+            <p>ამ გაკვეთილში თქვენ მოიცავთ:</p>
+            <ul>
+                <li><strong>თუ განცხადებები:</strong> თუ განცხადებები გაწვდიან პროგრამას პირობების გასამართლებად. მაგალითად:</li>
+                <pre>
+x = 10
+if x > 5:
+    print("x დიდი არის 5-ზე")
+else:
+    print("x მცირეა 5-ზე")
+                </pre>
+                <li><strong>For ციკლები:</strong> For ციკლები იყენებენ მონაცემთა კოლექციების შერჩევას. მაგალითი:</li>
+                <pre>
+for i in range(5):
+    print(i)
+                </pre>
+                <li><strong>While ციკლები:</strong> While ციკლები მიკვლევენ პროცესებს, რომლებიც უნდა განხორციელდეს, სანამ ლოგიკური პირობა ჭეშმარიტია:</li>
+                <pre>
+count = 0
+while count < 5:
+    print(count)
+    count += 1
+                </pre>
+                <li><strong>გაჩერება და გაგრძელება:</strong> თქვენ можете გაჩეროთ ციკლი ან გამოტოვოთ მიმდინარე შემოხვევა:</li>
+                <pre>
+for i in range(10):
+    if i == 5:
+        break
+    print(i)
+                </pre>
+            </ul>
+        </div>
+
+        <div class="mySlides">
+            <h2>გაკვეთილი 3: ფუნქციები</h2>
+            <p>ფუნქციები არის კოდის ხელმოსაწვდომი ნაწილები, რომლებიც შესრულებას ახორციელებენ. ისინი საშუალებას გაწვდავენ კოდის ხელმოსაწვდომად, რომლითაც შეგიძლიათ ამუშაოთ და ანტეიაროთ კოდის განმეორებისგან.</p>
+            <p>ამ გაკვეთილში თქვენ შეისწავლით:</p>
+            <ul>
+                <li><strong>ფუნქციების განსაზღვრა:</strong> შეგიძლიათ განსაზღვროთ ფუნქცია შემდეგი ფორმატით:</li>
+                <pre>
+def greet(name):
+    print("გამარჯობა, " + name)
+                </pre>
+                <li><strong>არგუმენტები და დაბრუნების მნიშვნელობები:</strong> ფუნქციები შეიძლება მიიღონ არგუმენტები და დაბრუნდეს მნიშვნელობები:</li>
+                <pre>
+def add(a, b):
+    return a + b
+
+result = add(3, 5)
+print(result)  # 8
+                </pre>
+                <li><strong>Lambda ფუნქციები:</strong> Lambda ფუნქციები არის ანონიმური ფუნქციები, რომლებიც გამოიყენება ძალიან მოკლე ფუნქციებისთვის:</li>
+                <pre>
+square = lambda x: x * x
+print(square(5))  # 25
+                </pre>
+                <li><strong>ცვლადების მასშტაბები:</strong> ფუნქციების შიგნით შექმნილი ცვლადები ადგილობრივია და არ არის ხელმისაწვდომი ფუნქციის გარეთ:</li>
+                <pre>
+def my_function():
+    local_variable = "მხოლოდ ამ ფუნქციაში"
+    print(local_variable)
+
+my_function()
+# print(local_variable)  # ეს გამოიწვევს შეცდომას
+                </pre>
+            </ul>
+        </div>
+
+        <div class="mySlides">
+            <h2>გაკვეთილი 4: მონაცემთა სტრუქტურები</h2>
+            <p>პითონი გთავაზობთ რამდენიმე მშვენივრად დახლებულ მონაცემთა სტრუქტურას, რომლებიც ეხმარებიან მონაცემების ორგანიზებაში და მართვაში. სწორი მონაცემთა სტრუქტურების არჩევა არის მნიშვნელოვანი ასპექტი პროგრამირების პროცესში.</p>
+            <p>ამ გაკვეთილში თქვენ შეისწავლით:</p>
+            <ul>
+                <li><strong>ის列表:</strong> ლისტები არის ერთ-ერთი ყველაზე ხშირად გამოყენებული მონაცემთა სტრუქტურა, რომლებიც გამოიყენებენ რამდენიმე მნიშვნელობის შესანახად:</li>
+                <pre>
+my_list = [1, 2, 3, 4, 5]
+my_list.append(6)  # 6-ის დამატება
+print(my_list)  # [1, 2, 3, 4, 5, 6]
+                </pre>
+                <li><strong>ჩატვირთული სიები:</strong> პითონი გთავაზობთ სიმარტივის გრძნობას, ხოლო, შესაძლოა ჩატვირთულ სიების მაგალითი:</li>
+                <pre>
+my_nested_list = [[1, 2, 3], [4, 5, 6]]
+print(my_nested_list[0][1])  # 2
+                </pre>
+                <li><strong>დარეკვები:</strong> დარეკვები მრავალგანზომილებიანი მონაცემების შენახვისთვის, როგორიცაა:</li>
+                <pre>
+my_tuple = (1, 2, 3)
+print(my_tuple[1])  # 2
+                </pre>
+                <li><strong>სხვადასხვა:</strong> პითონში თქვენ შეგიძლიათ გამოიყენოთ განსხვავებული მონაცემთა სტრუქტურები, როგორიცაა listas, sets და dictionaries:</li>
+                <pre>
+my_set = {1, 2, 3, 4}
+my_set.add(5)  # 5-ის დამატება
+print(my_set)  # {1, 2, 3, 4, 5}
+                </pre>
+            </ul>
+        </div>
+
+        <div class="mySlides">
+            <h2>გაკვეთილი 5: ფაილის დამუშავება</h2>
+            <p>ფაილის დამუშავება აუცილებელია ფაილებიდან წასაკითხად და ჩასაწერად პითონში. თქვენ შეგიძლიათ შექმნათ, წაშალოთ და შეცვალოთ ფაილები თქვენი პროგრამების საშუალებით.</p>
+            <p>ამ გაკვეთილში თქვენ მოიცავთ:</p>
+            <ul>
+                <li><strong>ფაილების გახსნა და დახურვა:</strong> ფაილების გახსნის შემდეგ, უნდა დახუროთ ისინი:</li>
+                <pre>
+file = open("example.txt", "w")  # "w" ნიშნავს წერის რეჟიმი
+file.write("ეს არის ტექსტი.")
+file.close()
+                </pre>
+                <li><strong>ფაილებისგან კითხვა:</strong> შეგიძლიათ გააკითხოთ ფაილების შიგთავსი შემდეგი ფორმით:</li>
+                <pre>
+file = open("example.txt", "r")  # "r" ნიშნავს კითხვითი რეჟიმი
+content = file.read()
+print(content)
+file.close()
+                </pre>
+                <li><strong>ფაილების დაწერა:</strong> შეგიძლიათ გამოიყენოთ "a" (append) რეჟიმი, რათა დაამატოთ ახალი ტექსტი არსებული ფაილის ბოლოს:</li>
+                <pre>
+file = open("example.txt", "a")
+file.write("\nამოცდა ამ ტექსტში.")
+file.close()
+                </pre>
+                <li><strong>ფაილების გზების მუშაობა:</strong> თქვენ შეგიძლიათ გააკეთოთ ფაილებისთვის სხვადასხვა გზები:</li>
+                <pre>
+import os
+
+# ამოწერეთ ფაილის ჩათვლილი
+if os.path.exists("example.txt"):
+    print("ფაილი არსებობს!")
+else:
+    print("ფაილი არ არსებობს.")
+                </pre>
+            </ul>
+        </div>
+
+        <div class="mySlides">
+            <h2>გაკვეთილი 6: კლასები და ობიექტები</h2>
+            <p>კლასები და ობიექტები არიან ობიექტ-მიმართულებული პროგრამირების (OOP) საფუძვლები. OOP-ის გამოყენება შესაძლებელს ხდის კოდის ორგანიზების, მოდულარობის და ხელმოსაწვდომობის გაწვდას.</p>
+            <p>ამ გაკვეთილში თქვენ მოიცავთ:</p>
+            <ul>
+                <li><strong>კლასების განსაზღვრა:</strong> კლასები არის შაბლონები, რომლებშიც შეგიძლიათ შექმნათ ობიექტები. მაგალითად:</li>
+                <pre>
+class Dog:
+    def bark(self):
+        print("ბარკ!")
+
+my_dog = Dog()
+my_dog.bark()  # ბარკ!
+                </pre>
+                <li><strong>მონაცემთა წევრებისა და მეთოდების გამოყენება:</strong> კლასში შეგიძლიათ განსაზღვროთ მონაცემთა წევრები და მეთოდები:</li>
+                <pre>
+class Car:
+    def __init__(self, model, year):
+        self.model = model
+        self.year = year
+
+my_car = Car("Toyota", 2020)
+print(my_car.model)  # Toyota
+                </pre>
+                <li><strong>მემკვიდრეობა:</strong> მემკვიდრეობა ნიშნავს, რომ ერთ კლასში შეიძლება გამოიყენოს სხვა კლასის თვისებები:</li>
+                <pre>
+class Animal:
+    def speak(self):
+        print("ხმა")
+
+class Cat(Animal):
+    def speak(self):
+        print("მიჟჟი")
+
+my_cat = Cat()
+my_cat.speak()  # მიჟჟი
+                </pre>
+                <li><strong>ინკაფსულაცია:</strong> ინფორმაცია შეიძლება ინკაფსულირდეს (დამალულიყო) კლასებში, რაც საშუალებას გაწვდოს უსაფრთხოება:</li>
+                <pre>
+class BankAccount:
+    def __init__(self, balance):
+        self.__balance = balance  # ინკაფსულირებული ცვლადი
+
+    def deposit(self, amount):
+        self.__balance += amount
+
+    def get_balance(self):
+        return self.__balance
+
+my_account = BankAccount(100)
+my_account.deposit(50)
+print(my_account.get_balance())  # 150
+                </pre>
+            </ul>
+        </div>
+
+        <div class="mySlides">
+            <h2>გაკვეთილი 7: მოდულები და პაკეტები</h2>
+            <p>პითონში თქვენ შეგიძლიათ გამოიყენოთ მოდულები და პაკეტები, რათა გააუმჯობესოთ კოდის ორგანიზება და რეციკლირება. მოდულები არის ფაილები, რომლებშიც არის პითონის კოდი, ხოლო პაკეტები - ეს არის ფოლდერები, რომლებიც შეიცავენ რამდენიმე მოდულს.</p>
+            <p>ამ გაკვეთილში თქვენ შეისწავლით:</p>
+            <ul>
+                <li><strong>მოდულების იმპორტირება:</strong> შეგიძლიათ იმპორტირდეთ მოდულები და გამოიყენოთ მათი ფუნქციები:</li>
+                <pre>
+import math
+
+print(math.sqrt(16))  # 4.0
+                </pre>
+                <li><strong>მოდულების შექმნა:</strong> შეგიძლიათ შექმნათ საკუთარი მოდული:</li>
+                <pre>
+# my_module.py
+def greet(name):
+    return "გამარჯობა, " + name
+
+# ამ მოდულიდან
+import my_module
+print(my_module.greet("გიორგი"))  # გამარჯობა, გიორგი
+                </pre>
+                <li><strong>პაკეტების გამოყენება:</strong> პაკეტების გამოყენება კარგია, როცა თქვენი პროექტი შედგება ბევრი მოდულისგან:</li>
+                <pre>
+# my_package/__init__.py
+# my_package/my_module.py
+# my_package/my_other_module.py
+                </pre>
+            </ul>
+        </div>
+
+        <div class="mySlides">
+            <h2>გაკვეთილი 8: გამონაკლისების დამუშავება</h2>
+            <p>გამონაკლისები გამოიყენება, რათა მოიქცეთ კოდის შეცდომების პირობებში. ეს საშუალებას გაწვდავთ კოდების მდგრადობას.</p>
+            <p>ამ გაკვეთილში თქვენ მოიცავთ:</p>
+            <ul>
+                <li><strong>Try-Except ბლოკი:</strong> შეგიძლიათ მოათავსოთ კოდი try-Except ბლოკში, რომ გაწვდოს გამონაკლისების დამუშავება:</li>
+                <pre>
+try:
+    result = 10 / 0
+except ZeroDivisionError:
+    print("არ შეიძლება გაყოფა 0-ით!")
+                </pre>
+                <li><strong>Finally ბლოკი:</strong> Finally ბლოკი გაწვდავს კოდის შესრულებას გამონაკლისების შემთხვევაშიც:</li>
+                <pre>
+try:
+    file = open("example.txt", "r")
+except FileNotFoundError:
+    print("ფაილი არ მოიძებნება!")
+finally:
+    print("დამუშავება დასრულებულია.")
+                </pre>
+            </ul>
+        </div>
+
+        <div class="mySlides">
+            <h2>გაკვეთილი 9: მონაცემთა გაწვდვა</h2>
+            <p>პითონში მონაცემთა გაწვდვა გამოიყენება რთული მონაცემების სტრუქტურების გაგზავნისთვის ან მიღებისთვის. ეს განსაკუთრებით მნიშვნელოვანია JSON და XML ფორმატებში მონაცემების გაცვლისას.</p>
+            <p>ამ გაკვეთილში თქვენ შეისწავლით:</p>
+            <ul>
+                <li><strong>JSON მონაცემების მუშაობა:</strong> JSON არის მონაცემების გაცვლის ფორმატი:</li>
+                <pre>
+import json
+
+data = {
+    "name": "გიორგი",
+    "age": 30,
+    "is_student": False
+}
+
+json_data = json.dumps(data)
+print(json_data)  # {"name": "გიორგი", "age": 30, "is_student": false}
+                </pre>
+                <li><strong>JSON მონაცემების მიღება:</strong> შეგიძლიათ მიიღოთ JSON მონაცემები და გადაიყვანოთ პითონის ობიექტებად:</li>
+                <pre>
+received_data = '{"name": "გიორგი", "age": 30, "is_student": false}'
+parsed_data = json.loads(received_data)
+print(parsed_data["name"])  # გიორგი
+                </pre>
+            </ul>
+        </div>
+
+        <div class="mySlides">
+            <h2>გაკვეთილი 10: ვებსერვისები</h2>
+            <p>ვებსერვისები გთავაზობთ APIs, რომლებიც გამოიყენება მონაცემების მიწოდებისა და გაცვლისთვის ინტერნეტით. თქვენ შეგიძლიათ შექმნათ თქვენი საკუთარი ვებსერვისი ან გამოიყენოთ არსებული.</p>
+            <p>ამ გაკვეთილში თქვენ მოიცავთ:</p>
+            <ul>
+                <li><strong>HTTP მოთხოვნები:</strong> შეგიძლიათ გამოიყენოთ ბიბლიოთეკები, როგორიცაა requests, რათა მოაწვდოთ HTTP მოთხოვნები:</li>
+                <pre>
+import requests
+
+response = requests.get("https://api.example.com/data")
+print(response.json())
+                </pre>
+                <li><strong>RESTful API:</strong> RESTful API-ები იყენებენ HTTP მეთოდებს (GET, POST, PUT, DELETE) მონაცემების მუშაობისთვის:</li>
+                <pre>
+response = requests.post("https://api.example.com/data", json={"key": "value"})
+print(response.status_code)  # 200
+                </pre>
+            </ul>
+        </div>
+    </div>
+
+    <div class="navigation">
+        <button class="button" onclick="plusSlides(-1)">წინა</button>
+        <button class="button" onclick="plusSlides(1)">შემდეგი</button>
+        
+    </div>
+
+    
+    
+    <div class="mySlides">
+        <h2>გაკვეთილი 11: ფაილების წაკითხვა და წერა</h2>
+        <p>პითონში ფაილების მართვა არის ერთ-ერთი მნიშვნელოვანი ნაწილია. შეგიძლიათ გააკეთოთ ფაილების წაკითხვა და წერა, რაც საშუალებას გაწვდოს მონაცემების შენახვა და შენახვა. <code>open()</code> ფუნქციის გამოყენებით, შეგიძლიათ გახსნათ ფაილი:</p>
+        <pre>
+    # ფაილის გახსნა და წერა
+    with open('my_file.txt', 'w') as file:
+        file.write("გამარჯობა, მსოფლიო!\n")
+        file.write("ეს არის ჩემი პირველი ფაილი.")
+        </pre>
+        <p>ფაილის წაკითხვისას შეგიძლიათ გამოიყენოთ <code>read()</code>, <code>readline()</code>, ან <code>readlines()</code>:</p>
+        <pre>
+    # ფაილის წაკითხვა
+    with open('my_file.txt', 'r') as file:
+        content = file.read()
+        print(content)
+        </pre>
+        <p>ფაილების მუშაობისას მნიშვნელოვანია რომ გქონდეთ გამონაკლისების მართვა, რათა თავიდან აიცილოთ შეცდომები, როგორიცაა ფაილის არ არსებობა:</p>
+        <pre>
+    try:
+        with open('non_existent_file.txt', 'r') as file:
+            content = file.read()
+    except FileNotFoundError:
+        print("ფაილი არ არსებობს!")
+        </pre>
+    </div>
+    
+    <div class="mySlides">
+        <h2>გაკვეთილი 12: მოდულები და პაკეტები</h2>
+        <p>პითონში შეგიძლიათ შექმნათ საკუთარი მოდულები, რაც აერთიანებს ფუნქციების, კლასების და ცვლადების ჯგუფს. მოდულის შექმნისათვის, უბრალოდ უნდა შექმნათ .py გაფართოების ფაილი:</p>
+        <pre>
+    # my_module.py
+    def greet(name):
+        return f"გამარჯობა, {name}!"
+        </pre>
+        <p>მოდულის გამოყენებისას შეგიძლიათ გამოიყენოთ <code>import</code>:</p>
+        <pre>
+    import my_module
+    
+    print(my_module.greet("დავით"))  # გამარჯობა, დავით!
+        </pre>
+        <p>პითონში არსებობს მრავალი სექრეტული მოდული, როგორიცაა <code>math</code> და <code>random</code>, რომლებიც მოიცავს ფუნქციებს და კოპირებულ ინფორმაციას:</p>
+        <pre>
+    import math
+    import random
+    
+    print(math.sqrt(16))  # 4.0
+    print(random.randint(1, 10))  # რანდომული მთელი რიცხვი 1 და 10 შორის
+        </pre>
+    </div>
+    
+    <div class="mySlides">
+        <h2>გაკვეთილი 13: ინტერნეტთან დაკავშირება</h2>
+        <p>პითონი საშუალებას გაწვდოს ინტერნეტთან დაკავშირების მრავალი გზა, ერთ-ერთი ყველაზე პოპულარულია <code>requests</code> მოდული. მისი გამოყენებით შეგიძლიათ გაუგზავნოთ HTTP მოთხოვნები:</p>
+        <pre>
+    import requests
+    
+    response = requests.get('https://jsonplaceholder.typicode.com/posts')
+    if response.status_code == 200:
+        posts = response.json()
+        print(posts)
+        </pre>
+        <p>ეს საშუალებას გაწვდოს მონაცემების მიღება და დამუშავება JSON ფორმატში. ასევე შეგიძლიათ გაუგზავნოთ POST მოთხოვნები:</p>
+        <pre>
+    data = {'title': 'შეიძლება', 'body': 'ეს არის ტესტი', 'userId': 1}
+    response = requests.post('https://jsonplaceholder.typicode.com/posts', json=data)
+    print(response.json())
+        </pre>
+    </div>
+    
+    <div class="mySlides">
+        <h2>გაკვეთილი 14: მონაცემთა ბაზები</h2>
+        <p>პითონი მხარს უჭერს სხვადასხვა მონაცემთა ბაზების ტექნოლოგიებს, როგორიცაა SQLite, MySQL და PostgreSQL. <code>sqlite3</code> მოდულის გამოყენებით შეგიძლიათ მარტივად შექმნათ და მართოთ SQLite მონაცემთა ბაზები:</p>
+        <pre>
+    import sqlite3
+    
+    # მონაცემთა ბაზის შექმნა
+    connection = sqlite3.connect('my_database.db')
+    cursor = connection.cursor()
+    
+    # ცხრილის შექმნა
+    cursor.execute('''CREATE TABLE IF NOT EXISTS users (id INTEGER PRIMARY KEY, name TEXT)''')
+    
+    # მონაცემების დამატება
+    cursor.execute("INSERT INTO users (name) VALUES ('დავით')")
+    connection.commit()
+    
+    # მონაცემების წაკითხვა
+    cursor.execute("SELECT * FROM users")
+    print(cursor.fetchall())  # [(1, 'დავით')]
+    
+    # კავშირი დაკეტვა
+    connection.close()
+        </pre>
+        <p>შეგიძლიათ გამოიყენოთ SQL ბრძანებები მონაცემთა ბაზების მართვისათვის:</p>
+        <pre>
+    # მონაცემების განახლება
+    cursor.execute("UPDATE users SET name = 'მარიამი' WHERE id = 1")
+    connection.commit()
+        </pre>
+    </div>
+    
+    <div class="mySlides">
+        <h2>გაკვეთილი 15: ქსელური პროგრამირება</h2>
+        <p>პითონი საშუალებას გაწვდოს ქსელური პროგრამირების განხორციელება <code>socket</code> მოდულის გამოყენებით. თქვენ შეგიძლიათ შექმნათ TCP/IP სერვერი და კლიენტი:</p>
+        <pre>
+    import socket
+    
+    # სერვერის შექმნა
+    server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    server_socket.bind(('localhost', 12345))
+    server_socket.listen(1)
+    
+    print("სერვერი მზად არის...")
+    
+    while True:
+        client_socket, address = server_socket.accept()
+        print(f"შეტყობინება მიღებულია: {address}")
+        message = "გამარჯობა, კლიენტი!"
+        client_socket.send(message.encode())
+        client_socket.close()
+        </pre>
+        <p>კლიენტის მხარეს შეგიძლიათ გაუგზავნოთ მოთხოვნები სერვერის მიმართ:</p>
+        <pre>
+    # კლიენტის კოდი
+    client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    client_socket.connect(('localhost', 12345))
+    response = client_socket.recv(1024)
+    print(response.decode())
+    client_socket.close()
+        </pre>
+    </div>
+    <div class="mySlides">
+        <h2>გაკვეთილი 16: ობიექტების ორიენტირებული პროგრამირება</h2>
+        <p>პითონი მხარს უჭერს ობიექტების ორიენტირებულ პროგრამირებას (OOP), რაც საშუალებას გაწვდოს მონაცემების და ფუნქციების გაწვდოს კლასებში. კლასების შექმნისას, შეგიძლიათ განსაზღვროთ თვისებები და მეთოდები, რომლებიც დაკავშირებულია იმავე კლასთან.</p>
+        <p>მაგალითად, კლასის შექმნა და მისი მაგალითების შექმნა შეიძლება იყოს:</p>
+        <pre>
+    class Animal:
+        def __init__(self, name, species):
+            self.name = name
+            self.species = species
+    
+        def speak(self):
+            return f"{self.name} აკეთებს ხმას!"
+    
+    class Dog(Animal):
+        def speak(self):
+            return f"{self.name} ყეფს!"
+    
+    my_dog = Dog(name="ბოკო", species="ძაღლი")
+    print(my_dog.speak())  # ბოკო ყეფს!
+        </pre>
+        <p>OOP-ში ასევე შეგიძლიათ გააკეთოთ მემკვიდრეობა და პოლიმორფიზმი. მემკვიდრეობა საშუალებას გაწვდოს ახალი კლასების შექმნას არსებული კლასების საფუძველზე, ხოლო პოლიმორფიზმი ნიშნავს, რომ სხვადასხვა კლასები შეიძლება იმავე მეთოდების გამოყენებით განსხვავებულად რეაგირონ.</p>
+    </div>
+    
+    <div class="mySlides">
+        <h2>გაკვეთილი 17: გენერატორები და იტერატორები</h2>
+        <p>გენერატორები და იტერატორები საშუალებას გაწვდოს მონაცემების ლაპარავაჭრობად ციკლებში, რაც საშუალებას გაწვდოს დიდი მონაცემების ნაკადების მართვა. გენერატორების შექმნისათვის, შეგიძლიათ გამოიყენოთ <code>yield</code> სიტყვა, რაც უნდა მოჰყვოს ფუნქციას:</p>
+        <pre>
+    def count_up_to(max):
+        count = 1
+        while count <= max:
+            yield count
+            count += 1
+    
+    for number in count_up_to(5):
+        print(number)
+        </pre>
+        <p>გენერატორები ძალიან სასარგებლოა დიდ მონაცემთა ნაკადებზე მუშაობისას, რადგან ისინი ზემოთ აღნიშნულ მონაცემებს ცალ-ცალკე სექრეტად მოიძიებენ.</p>
+        <p>იტერატორების შექმნისას, შეგიძლიათ შექმნათ კლასი, რომელიც ატარებს <code>\_\_iter\_\_()</code> და <code>\_\_next\_\_()</code> მეთოდებს, რაც საშუალებას გაწვდოს კლასის ობიექტებს იყოს გამოყენებული ციკლებში:</p>
+        <pre>
+    class Counter:
+        def __init__(self, low, high):
+            self.current = low
+            self.high = high
+    
+        def __iter__(self):
+            return self
+    
+        def __next__(self):
+            if self.current > self.high:
+                raise StopIteration
+            else:
+                self.current += 1
+                return self.current - 1
+    
+    for num in Counter(3, 8):
+        print(num)
+        </pre>
+    </div>
+    
+    <div class="mySlides">
+        <h2>გაკვეთილი 18: რამდენიმე ნაკადი (Threads)</h2>
+        <p>პითონში შეგიძლიათ მართოთ რამდენიმე ნაკადი <code>threading</code> მოდულის გამოყენებით, რაც საშუალებას გაწვდოს ფუნქციების პარალელური შესრულება. ნაკადების გამოყენებით შეგიძლიათ გაწვდოს აპლიკაციის დონის შესრულება, რაც საჭიროა დროის ეკონომიისათვის:</p>
+        <pre>
+    import threading
+    
+    def print_numbers():
+        for i in range(5):
+            print(i)
+    
+    def print_letters():
+        for letter in 'abcde':
+            print(letter)
+    
+    thread1 = threading.Thread(target=print_numbers)
+    thread2 = threading.Thread(target=print_letters)
+    
+    thread1.start()
+    thread2.start()
+    
+    thread1.join()
+    thread2.join()
+        </pre>
+        <p>ნაკადების გამოყენებისას მნიშვნელოვანია უნდა გახსოვდეთ სინქრონიზაციის საკითხების შესახებ, რადგან რამდენიმე ნაკადი შეიძლება სცადოს ერთი და იგივე რესურსების გამოყენება ერთდროულად.</p>
+    </div>
+    
+    <div class="mySlides">
+        <h2>გაკვეთილი 19: რუტინების და დებაგინგი</h2>
+        <p>პითონში დებაგინგი და რუტინების გამოყენება შესაძლებელია <code>pdb</code> მოდულის გამოყენებით. <code>pdb</code> საშუალებას გაწვდოს ტერმინალის საშუალებით კოდის გაწვდოს ხაზზე, გაწვდოს ვარიაბლებზე და განხორციელოს ნაბიჯ-ნაბიჯ გაწვდოს:</p>
+        <pre>
+    import pdb
+    
+    def factorial(n):
+        pdb.set_trace()
+        if n == 0:
+            return 1
+        else:
+            return n * factorial(n-1)
+    
+    print(factorial(5))
+        </pre>
+        <p>პროგრამის გაწვდოს ტრაექტორიის დასადგენად, შეგიძლიათ გამოიყენოთ <code>print()</code> ფუნქცია, რათა გამოსცადოთ სხვადასხვა ცვლადების მნიშვნელობები და ნახოთ როგორ მუშაობს პროგრამა.</p>
+    </div>
+    
+    <div class="mySlides">
+        <h2>გაკვეთილი 20: ვებსკრეპინგი</h2>
+        <p>პითონში ვებსკრეპინგი საშუალებას გაწვდოს ვებსაიტების მონაცემების გატაცება <code>BeautifulSoup</code> და <code>requests</code> მოდულების გამოყენებით. <code>BeautifulSoup</code> ხელს უწყობს HTML და XML დოკუმენტების ანალიზს:</p>
+        <pre>
+    from bs4 import BeautifulSoup
+    import requests
+    
+    response = requests.get('https://example.com')
+    soup = BeautifulSoup(response.content, 'html.parser')
+    
+    title = soup.title.string
+    print(f"გვერდის სათაური: {title}")
+    
+    for link in soup.find_all('a'):
+        print(link.get('href'))
+        </pre>
+        <p>ვებსკრეპინგი საჭიროა მონაცემების მისაღებად ვებსაიტებიდან, მაგრამ უნდა გახსოვდეთ კანონებისა და ვებსაიტების პოლიტიკის შესახებ, რომლებიც განსაზღვრავს scraping-ის შესაძლებლობას.</p>
+    </div>
+    
+    
+
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function showSlides(n) {
+            let slides = document.getElementsByClassName("mySlides");
+            if (n > slides.length) {slideIndex = 1}
+            if (n < 1) {slideIndex = slides.length}
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+            }
+            slides[slideIndex-1].style.display = "block";  
+        }
+    </script>
+
+</body>
+</html>

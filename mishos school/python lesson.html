@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Lessons</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #0056b3;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+        }
+
+        .slideshow-container {
+            position: relative;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .mySlides {
+            display: none;
+            padding: 20px;
+            background-color: #fff;
+            border: 2px solid #0056b3;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            margin-bottom: 20px;
+            transition: transform 0.5s ease, opacity 0.5s ease;
+        }
+
+        .active {
+            display: block;
+        }
+
+        .button {
+            background-color: #0056b3;
+            color: white;
+            padding: 10px 20px;
+            margin: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .button:hover {
+            background-color: #004494;
+            transform: scale(1.05);
+        }
+
+        .navigation {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+
+        pre {
+            background-color: #e9ecef;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Python Lessons</h1>
+
+    <div class="slideshow-container">
+        <div class="mySlides">
+            <h2>Lesson 1: Introduction to Python</h2>
+            <p>Python is a high-level, interpreted programming language known for its simplicity and accessibility. It was created by Guido van Rossum in 1991, and today it is widely used in web development, applications, data science, and machine learning.</p>
+            <p>In this lesson, you will learn about:</p>
+            <ul>
+                <li><strong>History of Python:</strong> Python has two major versions: Python 2 and Python 3. Python 3 is the modern and more powerful version that is actively used. It is continuously updated with new features.</li>
+                <li><strong>Installation and Configuration:</strong> If you don't have Python on your system, you can download it from the official website (https://www.python.org/downloads/). After installation, you can check the Python version by typing <code>python --version</code> in the terminal or command prompt.</li>
+                <li><strong>Basic Syntax:</strong> Python is a coding language that focuses on readability. For example, you can create a simple program to input text and then display it on the screen:</li>
+                <pre>
+print("Hello, World!")
+                </pre>
+                <li><strong>Data Types:</strong> Python has several basic data types, including:</li>
+                <ul>
+                    <li><code>int</code> - integers</li>
+                    <li><code>float</code> - floating-point numbers</li>
+                    <li><code>str</code> - string values</li>
+                    <li><code>bool</code> - boolean types (True / False)</li>
+                </ul>
+                <li><strong>Variables:</strong> Variables are names used to store data. For example:</li>
+                <pre>
+x = 5
+y = "Hello"
+                </pre>
+            </ul>
+        </div>
+
+        <div class="mySlides">
+            <h2>Lesson 2: Control Structures</h2>
+            <p>Control structures determine the flow of execution in your programs. They use logical conditions to decide which parts of the code to execute. This allows you to perform different actions under different conditions.</p>
+            <p>In this lesson, you will cover:</p>
+            <ul>
+                <li><strong>If Statements:</strong> If statements allow the program to evaluate conditions. For example:</li>
+                <pre>
+x = 10
+if x > 5:
+    print("x is greater than 5")
+else:
+    print("x is less than 5")
+                </pre>
+                <li><strong>For Loops:</strong> For loops iterate over a collection of data. Example:</li>
+                <pre>
+for i in range(5):
+    print(i)
+                </pre>
+                <li><strong>While Loops:</strong> While loops continue executing as long as a logical condition is true:</li>
+                <pre>
+count = 0
+while count < 5:
+    print(count)
+    count += 1
+                </pre>
+                <li><strong>Break and Continue:</strong> You can break out of a loop or skip the current iteration:</li>
+                <pre>
+for i in range(10):
+    if i == 5:
+        break
+    print(i)
+                </pre>
+            </ul>
+        </div>
+
+        <div class="mySlides">
+            <h2>Lesson 3: Functions</h2>
+            <p>Functions are reusable pieces of code that perform a specific task. They allow you to organize your code, making it easier to read and maintain.</p>
+            <p>In this lesson, you will learn about:</p>
+            <ul>
+                <li><strong>Defining Functions:</strong> You can define a function using the following format:</li>
+                <pre>
+def greet(name):
+    print("Hello, " + name)
+                </pre>
+                <li><strong>Arguments and Return Values:</strong> Functions can take arguments and return values:</li>
+                <pre>
+def add(a, b):
+    return a + b
+
+result = add(3, 5)
+print(result)  # 8
+                </pre>
+                <li><strong>Lambda Functions:</strong> Lambda functions are anonymous functions used for short operations:</li>
+                <pre>
+square = lambda x: x * x
+print(square(5))  # 25
+                </pre>
+                <li><strong>Variable Scope:</strong> Variables created inside functions are local and not accessible outside the function:</li>
+                <pre>
+def my_function():
+    local_variable = "Only inside this function"
+    print(local_variable)
+
+my_function()
+# print(local_variable)  # This will raise an error
+                </pre>
+            </ul>
+        </div>
+
+        <div class="mySlides">
+            <h2>Lesson 4: Data Structures</h2>
+            <p>Python provides several beautifully structured data types that help organize and manage data. Choosing the right data structures is an important aspect of programming.</p>
+            <p>In this lesson, you will learn about:</p>
+            <ul>
+                <li><strong>Lists:</strong> Lists are one of the most commonly used data structures that store multiple values:</li>
+                <pre>
+my_list = [1, 2, 3, 4, 5]
+my_list.append(6)  # Adding 6
+print(my_list)  # [1, 2, 3, 4, 5, 6]
+                </pre>
+                <li><strong>Nested Lists:</strong> Python allows you to use nested lists for organizing data:</li>
+                <pre>
+my_nested_list = [[1, 2, 3], [4, 5, 6]]
+print(my_nested_list[0][1])  # 2
+                </pre>
+                <li><strong>Tuples:</strong> Tuples are used to store immutable data:</li>
+                <pre>
+my_tuple = (1, 2, 3)
+print(my_tuple[1])  # 2
+                </pre>
+                <li><strong>Dictionaries:</strong> In Python, you can use dictionaries to store key-value pairs:</li>
+                <pre>
+my_dict = {"name": "David", "age": 30}
+print(my_dict["name"])  # David
+                </pre>
+            </ul>
+        </div>
+
+        <div class="mySlides">
+            <h2>Lesson 5: File Handling</h2>
+            <p>File handling is essential for reading and writing files in Python. You can create, delete, and modify files through your programs.</p>
+            <p>In this lesson, you will cover:</p>
+            <ul>
+                <li><strong>Opening and Closing Files:</strong> After opening files, you should close them:</li>
+                <pre>
+file = open("example.txt", "w")  # "w" means write mode
+file.write("This is some text.")
+file.close()
+                </pre>
+                <li><strong>Reading from Files:</strong> You can read the contents of a file using:</li>
+                <pre>
+file = open("example.txt", "r")  # "r" means read mode
+content = file.read()
+print(content)
+file.close()
+                </pre>
+                <li><strong>Using With Statement:</strong> It is recommended to use the <code>with</code> statement for opening files:</li>
+                <pre>
+with open("example.txt", "r") as file:
+    content = file.read()
+    print(content)
+                </pre>
+            </ul>
+        </div>
+    </div>
+
+    <div class="navigation">
+        <button class="button" onclick="plusSlides(-1)">&#10094; Previous</button>
+        <button class="button" onclick="plusSlides(1)">Next &#10095;</button>
+    </div>
+
+    <script>
+        let slideIndex = 0;
+        showSlides();
+
+        function plusSlides(n) {
+            slideIndex += n;
+            showSlides();
+        }
+
+        function showSlides() {
+            let slides = document.getElementsByClassName("mySlides");
+            if (slideIndex >= slides.length) {slideIndex = 0}
+            if (slideIndex < 0) {slideIndex = slides.length - 1}
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+            }
+            slides[slideIndex].style.display = "block";  
+        }
+    </script>
+
+</body>
+</html>

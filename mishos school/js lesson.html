@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Lessons</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('https://example.com/background.jpg'); /* Replace with your background image */
+            background-size: cover;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.7);
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+        }
+        h1, h2 {
+            text-align: center;
+            color: #ffcc00;
+        }
+        p, ul {
+            font-size: 1.1em;
+            line-height: 1.5em;
+            padding: 10px;
+        }
+        pre {
+            background: rgba(255, 255, 255, 0.1);
+            border-left: 3px solid #ffcc00;
+            padding: 10px;
+            overflow-x: auto;
+        }
+        .button-container {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .nav-button {
+            background-color: #007bff;
+            border: none;
+            color: white;
+            padding: 15px 20px;
+            margin: 5px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s;
+            font-size: 1.1em;
+        }
+        .nav-button:hover {
+            background-color: #0056b3;
+            transform: scale(1.05);
+        }
+        .lesson {
+            display: none;
+            padding: 20px;
+            border: 1px solid #ffcc00;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+        .lesson.active {
+            display: block;
+        }
+        .highlight {
+            color: #ffcc00;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>JavaScript Lessons</h1>
+
+        <!-- First set of lessons -->
+        <div class="lesson slide active">
+            <h2>1. What is JavaScript?</h2>
+            <p>JavaScript is a high-level programming language that is primarily used for the interactivity and dynamism of websites. It is one of the core technologies alongside HTML and CSS.</p>
+            <p>With JavaScript, you can:</p>
+            <ul>
+                <li>Implement interactive features on websites.</li>
+                <li>Process data input by the user.</li>
+                <li>Provide updates to the website without refreshing the old page.</li>
+            </ul>
+        </div>
+
+        <div class="lesson slide">
+            <h2>2. Variables</h2>
+            <p>In JavaScript, variables are used to store data. There are three types of variables: <code>var</code>, <code>let</code>, and <code>const</code>.</p>
+            <p><strong>Example:</strong></p>
+            <pre><code>let age = 25;
+const name = "Beka";</code></pre>
+            <p>Using these variables allows you to write and modernize code more easily.</p>
+        </div>
+
+        <div class="lesson slide">
+            <h2>3. Data Types</h2>
+            <p>JavaScript has several types of data:</p>
+            <ul>
+                <li><code>String</code> - text.</li>
+                <li><code>Number</code> - a number.</li>
+                <li><code>Boolean</code> - true or false.</li>
+                <li><code>Object</code> - complex data.</li>
+                <li><code>Array</code> - a list of elements.</li>
+            </ul>
+            <p>Examples:</p>
+            <pre><code>let message = "Hello";
+let score = 100;
+let isActive = true;</code></pre>
+        </div>
+
+        <div class="lesson slide">
+            <h2>4. Operators</h2>
+            <p>Operators in JavaScript are used to manipulate data. The main operators include:</p>
+            <ul>
+                <li><code>+</code> - addition.</li>
+                <li><code>-</code> - subtraction.</li>
+                <li><code>*</code> - multiplication.</li>
+                <li><code>/</code> - division.</li>
+            </ul>
+            <p>Example:</p>
+            <pre><code>let sum = 5 + 3; // 8
+let product = 5 * 3; // 15</code></pre>
+        </div>
+
+        <div class="lesson slide">
+            <h2>5. Control Structures</h2>
+            <p>Control structures in JavaScript allow you to make decisions and control code execution. These include:</p>
+            <ul>
+                <li><code>if</code> - to check a condition.</li>
+                <li><code>else</code> - if the condition is not met, execute this.</li>
+                <li><code>switch</code> - to select between multiple conditions.</li>
+                <li><code>for</code> and <code>while</code> loops - to repeat code.</li>
+            </ul>
+            <p>Examples:</p>
+            <pre><code>if (age >= 18) {
+    console.log("You are an adult.");
+} else {
+    console.log("You are still a minor.");
+}</code></pre>
+            <p>The <code>for</code> loop is an example:</p>
+            <pre><code>for (let i = 0; i &lt; 5; i++) {
+    console.log(i); // 0, 1, 2, 3, 4
+}</code></pre>
+        </div>
+
+        <!-- Second set of lessons -->
+        <div class="lesson slide">
+            <h2>6. Objects</h2>
+            <p>In JavaScript, objects are used to group multiple pieces of data. An object contains "properties" that are similar to variables. Objects are created as follows:</p>
+            <pre><code>const person = {
+    name: "Tamar",
+    age: 30,
+    greet: function() {
+        console.log("Hello, I am " + this.name);
+    }
+};</code></pre>
+            <p>You can access object attributes:</p>
+            <pre><code>console.log(person.name); // outputs: Tamar
+person.greet(); // outputs: Hello, I am Tamar</code></pre>
+            <p>Using objects allows you to store and manipulate more complex data.</p>
+        </div>
+
+        <div class="lesson slide">
+            <h2>7. Arrays</h2>
+            <p>JavaScript arrays are lists of elements. They can store the same or different types of data.</p>
+            <pre><code>const fruits = ["banana", "grape", "apple"];
+console.log(fruits[1]); // outputs: grape
+</code></pre>
+            <p>Array operations:</p>
+            <ul>
+                <li><code>fruits.push("pear");</code> - adds a new element at the end.</li>
+                <li><code>fruits.pop();</code> - removes the last element.</li>
+                <li><code>fruits.length;</code> - length of the array.</li>
+            </ul>
+        </div>
+
+        <div class="lesson slide">
+            <h2>8. Functions</h2>
+            <p>Functions in JavaScript allow for code reuse. A function is defined and called as follows:</p>
+            <pre><code>function add(a, b) {
+    return a + b;
+}
+console.log(add(2, 3)); // 5</code></pre>
+            <p>Functions can also be anonymous and passed as function arguments:</p>
+            <pre><code>const multiply = function(a, b) {
+    return a * b;
+};</code></pre>
+        </div>
+
+        <div class="lesson slide">
+            <h2>9. Scope</h2>
+            <p>Scopes in JavaScript define where variables and functions are accessible. There are three main scopes:</p>
+            <ul>
+                <li><strong>Global scope:</strong> variables accessible anywhere.</li>
+                <li><strong>Function scope:</strong> variables accessible only inside the function.</li>
+                <li><strong>Block scope:</strong> variables accessible only inside {}.</li>
+            </ul>
+            <p>Example:</p>
+            <pre><code>let globalVar = "This is a global variable";
+function testScope() {
+    let localVar = "This is a local variable";
+    console.log(globalVar);
+    console.log(localVar);
+}
+testScope();</code></pre>
+        </div>
+
+        <div class="lesson slide">
+            <h2>10. DOM Manipulation</h2>
+            <p>The Document Object Model (DOM) is an interface that browsers create to interact with HTML and CSS. You can manipulate the DOM using JavaScript:</p>
+            <pre><code>document.getElementById("myElement").innerHTML = "New content";</code></pre>
+            <p>This allows you to dynamically change the content and structure of your webpage.</p>
+        </div>
+
+        <div class="button-container">
+            <button class="nav-button" id="prevButton" onclick="showLesson(-1)">Previous</button>
+            <button class="nav-button" id="nextButton" onclick="showLesson(1)">Next</button>
+        </div>
+    </div>
+
+    <script>
+        let currentLesson = 0;
+        const lessons = document.querySelectorAll('.lesson');
+
+        function showLesson(direction) {
+            lessons[currentLesson].classList.remove('active');
+            currentLesson += direction;
+
+            if (currentLesson < 0) {
+                currentLesson = lessons.length - 1;
+            } else if (currentLesson >= lessons.length) {
+                currentLesson = 0;
+            }
+
+            lessons[currentLesson].classList.add('active');
+        }
+    </script>
+</body>
+</html>

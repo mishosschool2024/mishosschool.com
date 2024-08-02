@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Lessons</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('https://example.com/background.jpg'); /* Replace with your background image */
+            background-size: cover;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.7);
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+        }
+        h1, h2 {
+            text-align: center;
+            color: #ffcc00;
+        }
+        p, ul {
+            font-size: 1.1em;
+            line-height: 1.5em;
+            padding: 10px;
+        }
+        pre {
+            background: rgba(255, 255, 255, 0.1);
+            border-left: 3px solid #ffcc00;
+            padding: 10px;
+            overflow-x: auto;
+        }
+        .button-container {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .nav-button {
+            background-color: #007bff;
+            border: none;
+            color: white;
+            padding: 15px 20px;
+            margin: 5px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s;
+            font-size: 1.1em;
+        }
+        .nav-button:hover {
+            background-color: #0056b3;
+            transform: scale(1.05);
+        }
+        .lesson {
+            display: none;
+            padding: 20px;
+            border: 1px solid #ffcc00;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+        .lesson.active {
+            display: block;
+        }
+        .highlight {
+            color: #ffcc00;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>JavaScript Lessons</h1>
+
+        <!-- First set of lessons -->
+        <div class="lesson slide active">
+            <h2>1. What is JavaScript? (რა არის JavaScript?)</h2>
+            <p>JavaScript არის მაღალი დონის პროგრამირების ენა, რომელიც ძირითადად გამოიყენება ვებსაიტების ინტერაქტიულობისა და დინამიურობისათვის. ეს არის ერთ-ერთი ძირითადი ტექნოლოგია, რომელიც იყენებს HTML და CSS.</p>
+            <p>JavaScript-ის გამოყენებით შეგიძლიათ:</p>
+            <ul>
+                <li>განახორციელოთ ვებსაიტებზე ინტერაქტიული ფუნქციები.</li>
+                <li>წარმოადგენოთ მონაცემები მომხმარებლის მიერ.</li>
+                <li>დააწვდოთ განახლებები ვებსაიტზე без ძველი გვერდის განახლების.</li>
+            </ul>
+        </div>
+
+        <div class="lesson slide">
+            <h2>2. Variables (ცვლადები)</h2>
+            <p>JavaScript-ში ცვლადები გამოყენება მონაცემების შენახვისათვის. არსებობს სამი ტიპის ცვლადი: <code>var</code>, <code>let</code>, და <code>const</code>.</p>
+            <p><strong>მაგალითი:</strong></p>
+            <pre><code>let age = 25;
+const name = "ბექა";</code></pre>
+            <p>ამ ცვლადების გამოყენება საშუალებას გაწვდოს უფრო მარტივი კოდის წერა და მოდერნიზება.</p>
+        </div>
+
+        <div class="lesson slide">
+            <h2>3. Data Types (მონაცემთა ტიპები)</h2>
+            <p>JavaScript-ში არსებობს რამდენიმე ტიპის მონაცემები:</p>
+            <ul>
+                <li><code>String</code> - ტექსტი.</li>
+                <li><code>Number</code> - რიცხვი.</li>
+                <li><code>Boolean</code> - ჭეშმარიტება (true) ან ყალბი (false).</li>
+                <li><code>Object</code> - რთული მონაცემები.</li>
+                <li><code>Array</code> - ელემენტების სია.</li>
+            </ul>
+            <p>მაგალითები:</p>
+            <pre><code>let message = "გამარჯობა";
+let score = 100;
+let isActive = true;</code></pre>
+        </div>
+
+        <div class="lesson slide">
+            <h2>4. Operators (ოპერატორები)</h2>
+            <p>JavaScript-ში ოპერატორები გამოიყენება მონაცემების მანიპულაციისათვის. ძირითად ოპერატორებს მიეკუთვნება:</p>
+            <ul>
+                <li><code>+</code> - ჯამი.</li>
+                <li><code>-</code> - გადამოწმება.</li>
+                <li><code>*</code> - გამრავლება.</li>
+                <li><code>/</code> - გაყოფა.</li>
+            </ul>
+            <p>მაგალითი:</p>
+            <pre><code>let sum = 5 + 3; // 8
+let product = 5 * 3; // 15</code></pre>
+        </div>
+
+        <div class="lesson slide">
+            <h2>5. Control Structures (კონტროლის სტრუქტურები)</h2>
+            <p>JavaScript-ში კონტროლის სტრუქტურები საშუალებას გაწვდიან გადაწყვეტილებების მიღებას და კოდის ფრაგმენტების მუშაობას. აქ შედის:</p>
+            <ul>
+                <li><code>if</code> - პირობის შეწყვეტა.</li>
+                <li><code>else</code> - თუ პირობა არ შესრულდა, ჩაიწერება.</li>
+                <li><code>switch</code> - მრავალჯერადი პირობების შერჩევა.</li>
+                <li><code>for</code> და <code>while</code> ციკლები - კოდის განმეორება.</li>
+            </ul>
+            <p>მაგალითები:</p>
+            <pre><code>if (age >= 18) {
+    console.log("თქვენ ზრდასრული ხართ.");
+} else {
+    console.log("თქვენ ჯერ კიდევ მოზარდი ხართ.");
+}</code></pre>
+            <p>ციკლი <code>for</code> ამის მაგალითია:</p>
+            <pre><code>for (let i = 0; i &lt; 5; i++) {
+    console.log(i); // 0, 1, 2, 3, 4
+}</code></pre>
+        </div>
+
+        <!-- Second set of lessons -->
+        <div class="lesson slide">
+            <h2>6. Objects (ობიექტები)</h2>
+            <p>JavaScript-ში ობიექტები გამოიყენება რამდენიმე მონაცემის ჯგუფირებისათვის. ობიექტი შეიცავს "ჭრილობებს", რომლებიც ჰგავს ცვლადებს. ობიექტების შექმნა ხდება შემდეგნაირად:</p>
+            <pre><code>const person = {
+    name: "თამარ",
+    age: 30,
+    greet: function() {
+        console.log("გამარჯობა, მე ვარ " + this.name);
+    }
+};</code></pre>
+            <p>შეგიძლიათ გამოიყენოთ ობიექტების ატრიბუტები:</p>
+            <pre><code>console.log(person.name); // გამოიტანებს: თამარ
+person.greet(); // გამოიტანებს: გამარჯობა, მე ვარ თამარ</code></pre>
+            <p>ობიექტების გამოყენება საშუალებას გაწვდოს უფრო რთული მონაცემების შენახვა და მათზე მუშაობა.</p>
+        </div>
+
+        <div class="lesson slide">
+            <h2>7. Arrays (მასივები)</h2>
+            <p>JavaScript-ის მასივები გახლავთ ელემენტების სია. მათ შეუძლიათ შენახონ ერთნაირი ან განსხვავებული მონაცემთა ტიპები.</p>
+            <pre><code>const fruits = ["ბანანი", "აპხაზური", "ვაშლი"];
+console.log(fruits[1]); // გამოიტანებს: აპხაზური
+</code></pre>
+            <p>მასივებზე მოქმედებები:</p>
+            <ul>
+                <li><code>fruits.push("ნემსი");</code> - ახალ ელემენტს დაამატებს ბოლოს.</li>
+                <li><code>fruits.pop();</code> - ბოლო ელემენტს ამოიყვანს.</li>
+                <li><code>fruits.length;</code> - მასივის სიგრძე.</li>
+            </ul>
+        </div>
+
+        <div class="lesson slide">
+            <h2>8. Functions (ფუნქციები)</h2>
+            <p>JavaScript-ში ფუნქციები საშუალება გაწვდიან კოდის განმეორებით გამოყენებისათვის. ფუნქციის შექმნა და მისი გამოძახება ხდება შემდეგნაირად:</p>
+            <pre><code>function add(a, b) {
+    return a + b;
+}
+console.log(add(2, 3)); // 5</code></pre>
+            <p>ფუნქციები ასევე შეიძლება იყოს ანონიმური და გადასული ფუნქციების სახით:</p>
+            <pre><code>const multiply = function(a, b) {
+    return a * b;
+};</code></pre>
+        </div>
+
+        <div class="lesson slide">
+            <h2>9. Scope (საფეხური)</h2>
+            <p>JavaScript-ის სფეროები განსაზღვრავენ, თუ სად არის ცვლადები და ფუნქციები ხელმისაწვდომი. არსებობს სამი ძირითადი სფერო:</p>
+            <ul>
+                <li><strong>Global scope:</strong> ცვლადები, რომლებიც ხელმისაწვდომია ნებისმიერი ადგილას.</li>
+                <li><strong>Function scope:</strong> ცვლადები, რომლებიც ხელმისაწვდომია მხოლოდ ფუნქციის შიგნით.</li>
+                <li><strong>Block scope:</strong> ცვლადები, რომლებიც ხელმისაწვდომია მხოლოდ {} შიგნით.</li>
+            </ul>
+            <p>მაგალითი:</p>
+            <pre><code>let globalVar = "ეს გლობალური ცვლადია";
+function testScope() {
+    let localVar = "ეს ადგილობრივი ცვლადია";
+    console.log(globalVar);
+    console.log(localVar);
+}
+testScope();
+console.log(localVar); // შეცდომა: localVar არ არსებობს</code></pre>
+        </div>
+
+        <div class="lesson slide">
+            <h2>10. Error Handling (შეცდომების მართვა)</h2>
+            <p>JavaScript-ში შეცდომების მართვა არის კოდის უკეთესობისათვის. შეგიძლიათ გამოიყენოთ <code>try...catch</code> დაჯგუფება:</p>
+            <pre><code>try {
+    // კოდი, რომელიც შეიძლება შეცდომა გამოიწვიოს
+} catch (error) {
+    console.error("შეცდომა:", error);
+}</code></pre>
+            <p>ეს საშუალებას გაწვდოს კოდის მუშაობის გაუმჯობესება.</p>
+        </div>
+
+        <!-- Third set of lessons -->
+        <div class="lesson slide">
+            <h2>11. Events (შეტყობინებები)</h2>
+            <p>JavaScript-ის საშუალებით შეგიძლიათ დაუკავშირდეთ HTML ელემენტებს და მათზე რეაგირება მოახდინოთ. ელემენტებზე ღონისძიებების დამატება ხდება შემდეგნაირად:</p>
+            <pre><code>const button = document.querySelector("button");
+button.addEventListener("click", function() {
+    alert("ბატონი დაჭერილია!");
+});</code></pre>
+            <p>შეიძლება გამოიყენოთ სხვადასხვა ღონისძიებები, როგორიცაა <code>mouseover</code>, <code>keydown</code>, და სხვა.</p>
+        </div>
+
+        <div class="lesson slide">
+            <h2>12. DOM Manipulation (DOM-ის მანიპულაცია)</h2>
+            <p>JavaScript-ის საშუალებით შეგიძლიათ შეცვალოთ HTML-ის სტრუქტურა და სტილი. ელემენტების მანიპულირება ხდება შემდეგნაირად:</p>
+            <pre><code>const heading = document.querySelector("h1");
+heading.textContent = "ახალი სათაური";</code></pre>
+            <p>თქვენ ასევე შეგიძლიათ დაამატოთ ახალი ელემენტები:</p>
+            <pre><code>const newElement = document.createElement("div");
+document.body.appendChild(newElement);</code></pre>
+        </div>
+
+        <div class="lesson slide">
+            <h2>13. Fetch API (Fetch API)</h2>
+            <p>Fetch API გამოიყენება მონაცემების ასაწვდომად სერვერიდან. შეგიძლიათ მოითხოვოთ მონაცემები შემდეგნაირად:</p>
+            <pre><code>fetch("https://api.example.com/data")
+    .then(response => response.json())
+    .then(data => console.log(data))
+    .catch(error => console.error("შეცდომა:", error));</code></pre>
+            <p>ეს საშუალებას გაწვდოს სერვერიდან მონაცემების გაწვდას და პროცესების მართვას.</p>
+        </div>
+
+        <div class="lesson slide">
+            <h2>14. Promises (პრომისები)</h2>
+            <p>Promises არის JavaScript-ის იმონებს, რომლებიც გამოიყენება ასინქრონული პროცესების მართვისათვის. სექრეტული ფუნქციების შეთავაზების შემდეგ შეგიძლიათ მოითხოვოთ მონაცემები:</p>
+            <pre><code>const myPromise = new Promise((resolve, reject) => {
+    // ასინქრონული ოპერაცია
+    if (/* წარმატება */) {
+        resolve("წარმატებით!");
+    } else {
+        reject("შეცდომა!");
+    }
+});</code></pre>
+        </div>
+
+        <div class="lesson slide">
+            <h2>15. ES6+ Features (ES6+ ფუნქციები)</h2>
+            <p>ES6 (ECMAScript 2015) JavaScript-ის ახალი ვერსიაა, რომელიც ბევრ ახალ ფუნქციას და სინტაქსური სახის გაუმჯობესებას მოაქვს:</p>
+            <ul>
+                <li><strong>Arrow functions:</strong> <code>const sum = (a, b) => a + b;</code></li>
+                <li><strong>Template literals:</strong> <code>const greeting = `გამარჯობა, ${name}!`;</code></li>
+                <li><strong>Destructuring:</strong> <code>const {name, age} = person;</code></li>
+                <li><strong>Modules:</strong> <code>import {myFunction} from './myModule.js';</code></li>
+            </ul>
+            <p>ეს ფუნქციები JavaScript-ის კოდის დაწერის პროცესში უფრო მომწიფულობას უზრუნველყოფს.</p>
+        </div>
+
+        <!-- Fourth set of lessons -->
+        <div class="lesson slide">
+            <h2>16. Template Literals (თემპლეიტები)</h2>
+            <p>Template literals საშუალებას გაწვდიან შიდა კოდის (string) შიგნით განთავსება და ინტერპრეტირება. ისინი იწყება და სრულდება backticks-ით (<code>`</code>).</p>
+            <pre><code>const name = "ნინო";
+const greeting = `გამარჯობა, ${name}!`; // "გამარჯობა, ნინო!"</code></pre>
+            <p>ასევე შეგიძლიათ შეიქმნათ მრავალწარმოსაბეჭდი string-ები:</p>
+            <pre><code>const message = `ეს არის 
+ბრიტანული ტექსტი`; // მრავალწარმოსაბეჭდი</code></pre>
+        </div>
+
+        <div class="lesson slide">
+            <h2>17. Spread and Rest Operators (Spread და Rest ოპერატორები)</h2>
+            <p>Spread ოპერატორი (<code>...</code>) გამოიყენება მასივების და ობიექტების გაწვდას.</p>
+            <pre><code>const arr1 = [1, 2, 3];
+const arr2 = [...arr1, 4, 5]; // [1, 2, 3, 4, 5]</code></pre>
+            <p>Rest ოპერატორი (<code>...</code>) იყენებს ფუნქციის არგუმენტების კონსოლიდაციას:</p>
+            <pre><code>function sum(...args) {
+    return args.reduce((a, b) => a + b, 0);
+}</code></pre>
+        </div>
+
+        <div class="lesson slide">
+            <h2>18. Async/Await (Async/Await)</h2>
+            <p>Async/Await საშუალებას გაწვდიან პირობის კონტროლისა და ასინქრონული კოდის უფრო მარტივად მართვას:</p>
+            <pre><code>async function fetchData() {
+    try {
+        const response = await fetch("https://api.example.com/data");
+        const data = await response.json();
+        console.log(data);
+    } catch (error) {
+        console.error("შეცდომა:", error);
+    }
+}</code></pre>
+        </div>
+
+        <div class="lesson slide">
+            <h2>19. Fetching Data from APIs (მონაცემების გაწვდვა API-დან)</h2>
+            <p>API-დან მონაცემების გაწვდვისათვის შეგიძლიათ გამოიყენოთ <code>fetch</code> მეთოდი:</p>
+            <pre><code>fetch("https://api.example.com/data")
+    .then(response => response.json())
+    .then(data => console.log(data))
+    .catch(error => console.error("შეცდომა:", error));</code></pre>
+            <p>ამიტომ API-დან მონაცემების მიღება და მათი სამუშაო ფორმატით დამუშავება შეგიძლიათ.</p>
+        </div>
+
+        <div class="lesson slide">
+            <h2>20. Conclusion (დასკვნა)</h2>
+            <p>JavaScript წარმოადგენს მძლავრ ენას, რომელიც აუცილებელია თანამედროვე ვებსაიტების განვითარებისთვის. აქ ნაჩვენები თემები წარმოადგენს JavaScript-ის საბაზისო საფუძვლებს. თქვენ შეგიძლიათ გააგრძელოთ სწავლა და მიაღწიოთ ახალ დონეს.</p>
+            <p>ჩვენი მიზანია, რომ თქვენი ცოდნა და გამოცდილება გაფართოვდეს JavaScript-ის გამოყენებაში. ვიმედოვნებთ, რომ ეს გაწვდილი მასალები იქნება სასარგებლო.</p>
+        </div>
+
+        <div class="button-container">
+            <button class="nav-button" onclick="showLesson(1)">Lessons 1-5</button>
+            <button class="nav-button" onclick="showLesson(2)">Lessons 6-10</button>
+            <button class="nav-button" onclick="showLesson(3)">Lessons 11-15</button>
+            <button class="nav-button" onclick="showLesson(4)">Lessons 16-20</button>
+        </div>
+    </div>
+
+    <script>
+        let currentSlide = 1;
+
+        function showLesson(lessonNumber) {
+            const lessons = document.querySelectorAll('.lesson');
+            lessons.forEach((lesson, index) => {
+                lesson.classList.remove('active');
+                if (Math.floor(index / 5) + 1 === lessonNumber) {
+                    lesson.classList.add('active');
+                }
+            });
+            currentSlide = lessonNumber;
+        }
+
+        showLesson(1); // Show the first set of lessons initially
+    </script>
+</body>
+</html>

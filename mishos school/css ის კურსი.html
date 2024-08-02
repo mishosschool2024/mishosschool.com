@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS გაკვეთილები</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            color: #333;
+        }
+        header {
+            background-color: #007bff;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+        .lesson-container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .navigation-buttons {
+            margin-bottom: 20px;
+        }
+        .navigation-buttons button {
+            margin-right: 10px;
+            padding: 10px 15px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .navigation-buttons button:hover {
+            background-color: #0056b3;
+        }
+        .lesson {
+            display: none;
+        }
+        .fade {
+            display: block;
+            animation: fadeIn 0.5s;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>CSS გაკვეთილები</h1>
+    </header>
+    <main>
+        <div class="lesson-container">
+            <div class="navigation-buttons">
+                <button id="prevBtn" onclick="changeLesson(-1)" disabled>წინა გაკვეთილი</button>
+                <button id="nextBtn" onclick="changeLesson(1)">შემდეგი გაკვეთილი</button>
+            </div>
+            <div class="lessons">
+                <!-- First 5 Lessons -->
+                <section class="lesson fade" id="lesson1">
+                    <h2>გაკვეთილი 1: CSS-ის შესავალი</h2>
+                    <p>CSS (Cascading Style Sheets) არის ტექნოლოგია, რომელიც გამოიყენება HTML დოკუმენტების ვიზუალური სტილის განსაზღვრისთვის. CSS-ის საშუალებით შეგიძლიათ შეცვალოთ ელემენტების ფერები, ზომები, განლაგება და სხვა მახასიათებლები.</p>
+                    <h3>რა არის CSS?</h3>
+                    <p>CSS გამოიყენება ვებსაიტების ვიზუალური თვალნათელისთვის. თქვენ შეგიძლიათ მიაწვდოთ HTML ელემენტებს სტილი, როგორიცაა ფონი, საზღვარი და ტექსტის ფორმატირება.</p>
+                    <h3>CSS-ის სტრუქტურა</h3>
+                    <p>CSS-ის სტილი ზოგადად შედგება სელექტორისა და დეკლარაციისგან:</p>
+                    <pre><code>selector {
+    property: value;
+}</code></pre>
+                    <h3>დავალება</h3>
+                    <p>შექმენით CSS ფაილი, რომელიც შეიცავს მინიმუმ სამ სტილ სექციას. მიმართეთ HTML-ის ელემენტებს და მიაწვდეთ მათ სხვადასხვა სტილები.</p>
+                </section>
+
+                <section class="lesson fade" id="lesson2">
+                    <h2>გაკვეთილი 2: CSS-ის სელექტორები</h2>
+                    <p>CSS სელექტორები მიაწვდიან საშუალებას დაინახოთ, რომელი HTML ელემენტები უნდა სტილიზირდნენ. CSS-ის რამდენიმე ტიპის სელექტორი არსებობს.</p>
+                    <h3>ტიპები</h3>
+                    <ul>
+                        <li><strong>ტეგის სელექტორი:</strong> <code>p</code>, <code>h1</code>, <code>div</code>.</li>
+                        <li><strong>კლასის სელექტორი:</strong> <code>.classname</code>.</li>
+                        <li><strong>ID სელექტორი:</strong> <code>#idname</code>.</li>
+                    </ul>
+                    <h3>მაგალითი</h3>
+                    <pre><code>p {
+    color: blue;
+}</code></pre>
+                    <h3>დავალება</h3>
+                    <p>შექმენით CSS სელექტორები, რომლებსაც მივაწვდოთ სტილი HTML-ის სხვადასხვა ელემენტებს. გამოიყენეთ კლასი და ID სელექტორები.</p>
+                </section>
+
+                <section class="lesson fade" id="lesson3">
+                    <h2>გაკვეთილი 3: CSS-ის მახასიათებლები</h2>
+                    <p>CSS მახასიათებლები განსაზღვრავენ, როგორ უნდა გამოიყურებოდეს ელემენტები. არსებობს მრავალი მახასიათებელი, რომელიც შეგიძლიათ გამოიყენოთ.</p>
+                    <h3>ზომები</h3>
+                    <ul>
+                        <li><strong>ფერი:</strong> <code>color</code>, <code>background-color</code>.</li>
+                        <li><strong>ზომა:</strong> <code>width</code>, <code>height</code>.</li>
+                        <li><strong>საზღვარი:</strong> <code>border</code>, <code>border-radius</code>.</li>
+                    </ul>
+                    <h3>მაგალითი</h3>
+                    <pre><code>h1 {
+    color: red;
+    border: 1px solid black;
+}</code></pre>
+                    <h3>დავალება</h3>
+                    <p>შექმენით რამდენიმე CSS მახასიათებელი, რომლებსაც მივაწვდოთ სტილი HTML-ის ელემენტებს. ექსპერიმენტირეთ სხვადასხვა მახასიათებლებთან.</p>
+                </section>
+
+                <section class="lesson fade" id="lesson4">
+                    <h2>გაკვეთილი 4: CSS-ის განლაგება</h2>
+                    <p>CSS გამოიყენება ელემენტების განლაგების მართვისთვის. არსებობს რამდენიმე ტექნიკა, როგორიცაა ფლექსბოქსი და გრიდი.</p>
+                    <h3>გარკვეული ტექნიკა</h3>
+                    <ul>
+                        <li><strong>ფლექსბოქსი:</strong> სწრაფი და ეფექტური გზა ელემენტების განლაგებისთვის.</li>
+                        <li><strong>CSS გრიდი:</strong> საშუალებას გაწვდოს უფრო კომპლექსური განლაგებები.</li>
+                    </ul>
+                    <h3>მაგალითი</h3>
+                    <pre><code>.container {
+    display: flex;
+}</code></pre>
+                    <h3>დავალება</h3>
+                    <p>შექმენით განლაგება თქვენი HTML გვერდზე ფლექსბოქსის დახმარებით. მობილური მოწყობილობებისთვის განკუთვნილი დიზაინის იდეები.</p>
+                </section>
+
+                <section class="lesson fade" id="lesson5">
+                    <h2>გაკვეთილი 5: CSS-ის მედია შეკვეთები</h2>
+                    <p>CSS მედია შეკვეთები საშუალებას გაწვდოს ვიზუალური დიზაინის ადაპტირება სხვადასხვა მოწყობილობებზე. ეს აუცილებელია responsiv დიზაინისთვის.</p>
+                    <h3>მაგალითი</h3>
+                    <pre><code>@media screen and (max-width: 600px) {
+    body {
+        background-color: lightblue;
+    }
+}</code></pre>
+                    <h3>დავალება</h3>
+                    <p>გამოიყენეთ მედია შეკვეთები, რომ შექმნათ responsiv დიზაინი. შეამოწმეთ, როგორ შეიცვლება დიზაინი სხვადასხვა მოწყობილობებზე.</p>
+                </section>
+
+                <!-- Second 5 Lessons -->
+                <section class="lesson fade" id="lesson6">
+                    <h2>გაკვეთილი 6: ფონის თვისებები</h2>
+                    <p>CSS-ის საშუალებით შეგიძლიათ აკონტროლოთ ელემენტების ფონი. შეგიძლიათ გამოიყენოთ ფონი ფერი, გამოსახულება და სხვა თვისებები.</p>
+                    <h3>მაგალითი</h3>
+                    <pre><code>.background {
+    background-color: lightgreen;
+    background-image: url('https://example.com/image.jpg');
+    background-size: cover;
+}</code></pre>
+                    <h3>დავალება</h3>
+                    <p>შექმენით ელემენტი, რომელსაც მიაწვდეთ სხვადასხვა ფონი.</p>
+                </section>
+
+                <section class="lesson fade" id="lesson7">
+                    <h2>გაკვეთილი 7: ტექსტური მახასიათებლები</h2>
+                    <p>CSS-ის საშუალებით შეგიძლიათ აკონტროლოთ ტექსტის სტილი, ფერი და ზომა.</p>
+                    <h3>მაგალითი</h3>
+                    <pre><code>p {
+    font-size: 18px;
+    font-weight: bold;
+    color: darkblue;
+}</code></pre>
+                    <h3>დავალება</h3>
+                    <p>შექმენით სტილი, რომელიც თქვენს ტექსტს განსაზღვრავს. შეცვალეთ ფერები და ზომები.</p>
+                </section>
+
+                <section class="lesson fade" id="lesson8">
+                    <h2>გაკვეთილი 8: საზღვარი და მარცვლები</h2>
+                    <p>CSS-ს საშუალებით შეგიძლიათ აკონტროლოთ ელემენტების საზღვარი და მარცვლები.</p>
+                    <h3>მაგალითი</h3>
+                    <pre><code>div {
+    border: 2px solid black;
+    margin: 10px;
+    padding: 15px;
+}</code></pre>
+                    <h3>დავალება</h3>
+                    <p>განალაგეთ თქვენი ელემენტები CSS-ის საშუალებით.</p>
+                </section>
+
+                <section class="lesson fade" id="lesson9">
+                    <h2>გაკვეთილი 9: ტრანსფორმაციები და ანიმაციები</h2>
+                    <p>CSS-ის საშუალებით შეგიძლიათ შექმნათ ტრანსფორმაციები და ანიმაციები, რაც გააუმჯობესებს ვიზუალურ ეფექტებს.</p>
+                    <h3>მაგალითი</h3>
+                    <pre><code>.animate {
+    transition: transform 0.5s;
+}
+
+.animate:hover {
+    transform: scale(1.1);
+}</code></pre>
+                    <h3>დავალება</h3>
+                    <p>შექმენით ანიმაცია, როდესაც ელემენტი გაიტანს მარჯვენა ან უკუს მიმართულებით.</p>
+                </section>
+
+                <section class="lesson fade" id="lesson10">
+                    <h2>გაკვეთილი 10: CSS-ის ტრანსფორმაციები</h2>
+                    <p>CSS-ის საშუალებით შეგიძლიათ აკონტროლოთ ელემენტების ტრანსფორმაციები.</p>
+                    <h3>მაგალითი</h3>
+                    <pre><code>div {
+    transform: rotate(20deg);
+}</code></pre>
+                    <h3>დავალება</h3>
+                    <p>შექმენით ტრანსფორმაცია, რომელიც შეცვლის ელემენტის ფორმას ან ზომას.</p>
+                </section>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>© 2024 CSS გაკვეთილები</p>
+    </footer>
+    
+    <script>
+        let currentLessonIndex = 0;
+        const lessons = document.querySelectorAll('.lesson');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+
+        function showLesson(index) {
+            lessons.forEach((lesson, i) => {
+                lesson.style.display = (i === index) ? 'block' : 'none';
+            });
+            prevBtn.disabled = index === 0;
+            nextBtn.disabled = index === lessons.length - 1;
+        }
+
+        function changeLesson(direction) {
+            currentLessonIndex += direction;
+            showLesson(currentLessonIndex);
+        }
+
+        // Initially show the first lesson
+        showLesson(currentLessonIndex);
+    </script>
+</body>
+</html>

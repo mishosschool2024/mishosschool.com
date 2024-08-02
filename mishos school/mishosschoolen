@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<chapter>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Micho School</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1 class="hed">Micho School</h1>
+            <p>Zero to hero</p>
+        </div>
+        <nav>
+            <ul>
+                <li><h2>Tasks</h2></li>
+                <li><h2>Our Duty</h2></li>
+                <li><h2>About Us</h2></li>
+                <li><h2> Contact</h2></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="language-buttons">
+        <a href="https://example.com/english" class="lang-button">english</a>
+        <a href="https://example.com/kartuli" class="lang-button">Kartuli</a>
+    </section>
+    <section class="text two">
+        <h1 class="text three">Welcome to Micho's School</h1>
+        <h1 class="text three">Materials</h1>
+        <div class="carousel">
+            <button class="carousel-button left" onclick="previousSlide()">❮</button>
+            <div class="carousel-content">
+                <div class="carousel-item">
+                    <img src="logo1.png" class="photo" alt="HTML Logo" width="150" height="150">
+                    <a href="file:///C:/Users/Ikako/Desktop/dev/mishos%20school/html%20%E1%83%98%E1%83%A1%20%E1%83%A1%E1 %83%A0%E1%83%A3%E1%83%9A%E1%83%98%20%E1%83%99%E1%83%A3%E1%83%A0%E1%83%A1%E1 %83%98.html" class="button">html course</a>
+                </div>
+                <div class="carousel-item">
+                    <img src="logo2.png" class="photo" alt="CSS Logo" width="150" height="150">
+                    <a href="" class="button">css course</a>
+                </div>
+                <div class="carousel-item">
+                    <img src="logo3.png" class="photo" alt="JavaScript Logo" width="150" height="150">
+                    <a href="" class="button">javascript course</a>
+                </div>
+                <div class="carousel-item">
+                    <img src="logo4.png" class="photo" alt="Python Logo" width="150" height="150">
+                    <a href="" class="button">python course</a>
+                </div>
+                <div class="carousel-item">
+                    <img src="logo5.png" class="photo" alt="Visual Studio Logo" width="150" height="150">
+                    <a href="" class="button">visual studio course</a>
+                </div>
+                <div class="carousel-item">
+                    <img src="logo6.png" class="photo" alt="Arduino Logo" width="150" height="150">
+                    <a href="" class="button">arduino course</a>
+                </div>
+                <div class="carousel-item">
+                    <img src="logo7.png" class="photo" alt="C++ Logo" width="150" height="150">
+                    <a href="" class="button">c++ course</a>
+                </div>
+                <div class="carousel-item">
+                    <img src="logo8.png" class="photo" alt="Unity Logo" width="150" height="150">
+                    <a href="" class="button">Unity course</a>
+                </div>
+            </div>
+            <button class="carousel-button right" onclick="nextSlide()">❯</button>
+        </div>
+    </section>
+    <!-- Link to the JavaScript file -->
+    <script src="carousel.js"></script>
+</body>
+</html>

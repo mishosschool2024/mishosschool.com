@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Lessons</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            color: #333;
+        }
+        header {
+            background-color: #007bff;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+        .lesson-container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .navigation-buttons {
+            margin-bottom: 20px;
+        }
+        .navigation-buttons button {
+            margin-right: 10px;
+            padding: 10px 15px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .navigation-buttons button:hover {
+            background-color: #0056b3;
+        }
+        .lesson {
+            display: none;
+        }
+        .fade {
+            display: block;
+            animation: fadeIn 0.5s;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>CSS Lessons</h1>
+    </header>
+    <main>
+        <div class="lesson-container">
+            <div class="navigation-buttons">
+                <button onclick="showLessons(1)">First 5 Lessons</button>
+                <button onclick="showLessons(2)">Second 5 Lessons</button>
+                <button id="prevBtn" onclick="changeLesson(-1)" disabled>Previous Lesson</button>
+                <button id="nextBtn" onclick="changeLesson(1)">Next Lesson</button>
+            </div>
+            <div class="lessons">
+                <!-- First 5 Lessons -->
+                <section class="lesson fade" id="lesson1">
+                    <h2>Lesson 1: Introduction to CSS</h2>
+                    <p>CSS (Cascading Style Sheets) is a technology used to define the visual style of HTML documents. With CSS, you can change the colors, sizes, layout, and other characteristics of elements.</p>
+                    <h3>What is CSS?</h3>
+                    <p>CSS is used for the visual representation of websites. You can apply styles to HTML elements, such as background, borders, and text formatting.</p>
+                    <h3>Structure of CSS</h3>
+                    <p>A CSS rule generally consists of a selector and a declaration:</p>
+                    <pre><code>selector {
+    property: value;
+}</code></pre>
+                    <h3>Task</h3>
+                    <p>Create a CSS file that contains at least three style sections. Apply styles to HTML elements and give them different styles.</p>
+                </section>
+
+                <section class="lesson fade" id="lesson2">
+                    <h2>Lesson 2: CSS Selectors</h2>
+                    <p>CSS selectors allow you to determine which HTML elements should be styled. There are several types of CSS selectors.</p>
+                    <h3>Types</h3>
+                    <ul>
+                        <li><strong>Type Selector:</strong> <code>p</code>, <code>h1</code>, <code>div</code>.</li>
+                        <li><strong>Class Selector:</strong> <code>.classname</code>.</li>
+                        <li><strong>ID Selector:</strong> <code>#idname</code>.</li>
+                    </ul>
+                    <h3>Example</h3>
+                    <pre><code>p {
+    color: blue;
+}</code></pre>
+                    <h3>Task</h3>
+                    <p>Create CSS selectors that will apply styles to various HTML elements. Use class and ID selectors.</p>
+                </section>
+
+                <section class="lesson fade" id="lesson3">
+                    <h2>Lesson 3: CSS Properties</h2>
+                    <p>CSS properties define how elements should look. There are many properties you can use.</p>
+                    <h3>Sizes</h3>
+                    <ul>
+                        <li><strong>Color:</strong> <code>color</code>, <code>background-color</code>.</li>
+                        <li><strong>Size:</strong> <code>width</code>, <code>height</code>.</li>
+                        <li><strong>Border:</strong> <code>border</code>, <code>border-radius</code>.</li>
+                    </ul>
+                    <h3>Example</h3>
+                    <pre><code>h1 {
+    color: red;
+    border: 1px solid black;
+}</code></pre>
+                    <h3>Task</h3>
+                    <p>Create several CSS properties that will apply styles to HTML elements. Experiment with different properties.</p>
+                </section>
+
+                <section class="lesson fade" id="lesson4">
+                    <h2>Lesson 4: CSS Layout</h2>
+                    <p>CSS is used to control the layout of elements. There are several techniques, such as Flexbox and Grid.</p>
+                    <h3>Some Techniques</h3>
+                    <ul>
+                        <li><strong>Flexbox:</strong> A quick and effective way to layout elements.</li>
+                        <li><strong>CSS Grid:</strong> Allows for more complex layouts.</li>
+                    </ul>
+                    <h3>Example</h3>
+                    <pre><code>.container {
+    display: flex;
+}</code></pre>
+                    <h3>Task</h3>
+                    <p>Create a layout for your HTML page using Flexbox. Consider design ideas for mobile devices.</p>
+                </section>
+
+                <section class="lesson fade" id="lesson5">
+                    <h2>Lesson 5: CSS Media Queries</h2>
+                    <p>CSS media queries allow you to adapt the visual design for different devices. This is essential for responsive design.</p>
+                    <h3>Example</h3>
+                    <pre><code>@media screen and (max-width: 600px) {
+    body {
+        background-color: lightblue;
+    }
+}</code></pre>
+                    <h3>Task</h3>
+                    <p>Use media queries to create a responsive design. Check how the design changes on different devices.</p>
+                </section>
+
+                <!-- Second 5 Lessons -->
+                <section class="lesson fade" id="lesson6">
+                    <h2>Lesson 6: Background Properties</h2>
+                    <p>With CSS, you can control the background of elements. You can use background colors, images, and other properties.</p>
+                    <h3>Example</h3>
+                    <pre><code>.background {
+    background-color: lightgreen;
+    background-image: url('https://example.com/image.jpg');
+    background-size: cover;
+}</code></pre>
+                    <h3>Task</h3>
+                    <p>Create an element with different background styles.</p>
+                </section>
+
+                <section class="lesson fade" id="lesson7">
+                    <h2>Lesson 7: Text Properties</h2>
+                    <p>With CSS, you can control the style, color, and size of text.</p>
+                    <h3>Example</h3>
+                    <pre><code>p {
+    font-size: 18px;
+    font-weight: bold;
+    color: darkblue;
+}</code></pre>
+                    <h3>Task</h3>
+                    <p>Create a style that defines your text. Change the colors and sizes.</p>
+                </section>
+
+                <section class="lesson fade" id="lesson8">
+                    <h2>Lesson 8: Borders and Margins</h2>
+                    <p>With CSS, you can control the borders and margins of elements.</p>
+                    <h3>Example</h3>
+                    <pre><code>div {
+    border: 2px solid black;
+    margin: 10px;
+    padding: 15px;
+}</code></pre>
+                    <h3>Task</h3>
+                    <p>Arrange your elements using CSS.</p>
+                </section>
+
+                <section class="lesson fade" id="lesson9">
+                    <h2>Lesson 9: Transitions and Animations</h2>
+                    <p>With CSS, you can create transitions and animations that enhance visual effects.</p>
+                    <h3>Example</h3>
+                    <pre><code>.animate {
+    transition: transform 0.5s;
+}
+
+.animate:hover {
+    transform: scale(1.1);
+}</code></pre>
+                    <h3>Task</h3>
+                    <p>Create an animation that changes an element when it is hovered over.</p>
+                </section>
+
+                <section class="lesson fade" id="lesson10">
+                    <h2>Lesson 10: CSS Transformations</h2>
+                    <p>With CSS, you can control transformations of elements.</p>
+                    <h3>Example</h3>
+                    <pre><code>div {
+    transform: rotate(20deg);
+}</code></pre>
+                    <h3>Task</h3>
+                    <p>Create a transformation that changes the shape or size of an element.</p>
+                </section>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>© 2024 CSS Lessons</p>
+    </footer>
+    
+    <script>
+        let currentLessonIndex = 0;
+        const lessons = document.querySelectorAll('.lesson');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+
+        function showLessons(set) {
+            currentLessonIndex = 0;
+            if (set === 1) {
+                lessons.forEach((lesson, i) => {
+                    lesson.style.display = (i < 5) ? 'block' : 'none';
+                });
+            } else {
+                lessons.forEach((lesson, i) => {
+                    lesson.style.display = (i >= 5) ? 'block' : 'none';
+                });
+            }
+            showLesson(currentLessonIndex);
+        }
+
+        function showLesson(index) {
+            lessons.forEach((lesson, i) => {
+                lesson.style.display = (i === index) ? 'block' : 'none';
+            });
+            prevBtn.disabled = index === 0;
+            nextBtn.disabled = index === lessons.length - 1 || (currentLessonIndex >= 5 && index >= 10);
+        }
+
+        function changeLesson(direction) {
+            currentLessonIndex += direction;
+            showLesson(currentLessonIndex);
+        }
+
+        // Initially show the first set of lessons
+        showLessons(1);
+    </script>
+</body>
+</html>

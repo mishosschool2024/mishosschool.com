@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Lessons</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('https://example.com/background.jpg'); /* Change to your preferred background image */
+            background-size: cover;
+            color: #333;
+        }
+
+        h1, h2, h3 {
+            color: #007BFF;
+            text-align: center;
+        }
+
+        .lesson {
+            display: none;
+            padding: 20px;
+            margin: 20px;
+            border: 2px solid #007BFF;
+            border-radius: 8px;
+            background-color: rgba(255, 255, 255, 0.9);
+        }
+
+        .lesson p {
+            font-size: 1.2em;
+        }
+
+        .navigation-buttons {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 1.2em;
+            margin: 0 10px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            background-color: #007BFF;
+            color: white;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>HTML Lessons</h1>
+    </header>
+    <main>
+        <div class="lesson-container">
+            <div class="navigation-buttons">
+                <button onclick="showLessons(1)">First 5 Lessons</button>
+                <button onclick="showLessons(2)">Second 5 Lessons</button>
+                <button onclick="showLessons(3)">Third 5 Lessons</button>
+                <button onclick="showLessons(4)">Fourth 5 Lessons</button>
+            </div>
+            <div class="lessons">
+                <!-- First 5 Lessons -->
+                <section class="lesson fade" id="lesson1">
+                    <h2>Lesson 1: Introduction to HTML</h2>
+                    <p>HTML (Hypertext Markup Language) is a markup language used for creating websites. With HTML, you can structure and format text, images, and other elements. HTML is the backbone of a website, defining its structure and content.</p>
+                    <h3>What is HTML?</h3>
+                    <p>HTML is the standard language used for creating and managing websites. Editing HTML requires creating formatted content and visual design, which is important for creating websites that are easy to understand and appealing to users.</p>
+                    <h3>Structure of HTML</h3>
+                    <p>An HTML document begins with <code>&lt;!DOCTYPE html&gt;</code> and then the <code>&lt;html&gt;</code> tag, indicating the version of HTML. An HTML page must include <code>&lt;head&gt;</code> and <code>&lt;body&gt;</code> sections. The <code>&lt;head&gt;</code> contains information about the page, while the <code>&lt;body&gt;</code> is the part that appears on the user's screen.</p>
+                    <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;My First Website&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;h1&gt;Hello World&lt;/h1&gt;
+        &lt;p&gt;This is my first HTML page!&lt;/p&gt;
+    &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                    <h3>Task</h3>
+                    <p>Create a simple HTML file containing text content and save it as .html. Use the above example to create your own HTML page.</p>
+                </section>
+
+                <section class="lesson fade" id="lesson2">
+                    <h2>Lesson 2: HTML Elements</h2>
+                    <p>HTML elements are the basic components used to create websites. Each element contains opening and closing tags, for example, <code>&lt;p&gt;</code> and <code>&lt;/p&gt;</code>.</p>
+                    <h3>Types of Elements</h3>
+                    <ul>
+                        <li><strong>Block Elements:</strong> These elements start on a new line and occupy wide spaces. For example, <code>&lt;div&gt;</code>, <code>&lt;p&gt;</code>, <code>&lt;h1&gt;</code>.</li>
+                        <li><strong>Inline Elements:</strong> These elements do not start on a new line and are used within other elements. For example, <code>&lt;span&gt;</code>, <code>&lt;a&gt;</code>.</li>
+                    </ul>
+                    <h3>Example</h3>
+                    <p>Here is a simple example of how to use HTML elements:</p>
+                    <pre><code>&lt;p&gt;This is text inside a <strong>block element&lt;/strong&gt;&lt;/p&gt;</code></pre>
+                    <h3>Task</h3>
+                    <p>Create several block and inline elements. Write your name and age on an HTML page using <code>&lt;ul&gt;</code> and <code>&lt;li&gt;</code> elements.</p>
+                </section>
+
+                <section class="lesson fade" id="lesson3">
+                    <h2>Lesson 3: HTML Attributes</h2>
+                    <p>HTML attributes are added to elements to provide additional information. Adding attributes allows users to add more details, such as image settings, links to other websites, and more.</p>
+                    <h3>Using Attributes</h3>
+                    <pre><code>&lt;a href="https://www.example.com"&gt;This is a link&lt;/a&gt;</code></pre>
+                    <h3>Example</h3>
+                    <p>Example of adding attributes:</p>
+                    <pre><code>&lt;img src="image.jpg" alt="This is an image"&gt;</code></pre>
+                    <h3>Task</h3>
+                    <p>Add attributes to your HTML elements. Create an HTML page containing images and links.</p>
+                </section>
+
+                <section class="lesson fade" id="lesson4">
+                    <h2>Lesson 4: HTML Forms</h2>
+                    <p>HTML forms allow for the collection of user information. Forms are mainly used to collect user information, such as name, email, and more. A form can contain several elements, such as text fields, radio buttons, and buttons.</p>
+                    <h3>Form Structure</h3>
+                    <pre><code>&lt;form action="url" method="GET/POST"&gt;
+    &lt;input type="text" name="username"&gt;
+    &lt;input type="submit" value="Submit"&gt;
+&lt;/form&gt;</code></pre>
+                    <h3>Task</h3>
+                    <p>Create a form that asks for a name, password, and email. Add a link to verify the information.</p>
+                </section>
+
+                <section class="lesson fade" id="lesson5">
+                    <h2>Lesson 5: HTML Images</h2>
+                    <p>To add images in HTML, the <code>&lt;img&gt;</code> element is used. Adding images to a website significantly enhances the visual aspect and can include additional content.</p>
+                    <h3>Image Attributes</h3>
+                    <p>Attributes for adding images:</p>
+                    <ul>
+                        <li><strong>src:</strong> Specifies the source of the image.</li>
+                        <li><strong>alt:</strong> Contains a text description that appears instead of the image if the image does not load.</li>
+                    </ul>
+                    <h3>Example</h3>
+                    <pre><code>&lt;img src="image.jpg" alt="This is an image"&gt;</code></pre>
+                    <h3>Task</h3>
+                    <p>Add several images to your HTML page. Make sure the attributes used are correctly formatted.</p>
+                </section>
+
+                <!-- Second 5 Lessons -->
+                <section class="lesson fade" id="lesson6">
+                    <h2>Lesson 6: HTML Links</h2>
+                    <p>To add links in HTML, the <code>&lt;a&gt;</code> element is used. Links allow users to navigate to other pages or websites. The <code>href</code> attribute within the link element specifies the link's target.</p>
+                    <h3>Using Links</h3>
+                    <pre><code>&lt;a href="https://www.example.com"&gt;This is a link&lt;/a&gt;</code></pre>
+                    <h3>Task</h3>
+                    <p>Create several links that point to different websites. Add these links to your created page.</p>
+                </section>
+
+                <section class="lesson fade" id="lesson7">
+                    <h2>Lesson 7: HTML Sections</h2>
+                    <p>HTML allows for organizing the content into sections using the <code>&lt;div&gt;</code> and <code>&lt;span&gt;</code> elements.</p>
+                    <h3>Div and Span Elements</h3>
+                    <p>The <code>&lt;div&gt;</code> element is a block-level element used for grouping content, and the <code>&lt;span&gt;</code> element is an inline element used for grouping text.</p>
+                    <pre><code>&lt;div&gt;
+    &lt;p&gt;This is a paragraph inside a div element.&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+                    <h3>Task</h3>
+                    <p>Use div and span elements to organize your HTML content into different sections.</p>
+                </section>
+
+                <section class="lesson fade" id="lesson8">
+                    <h2>Lesson 8: HTML Tables</h2>
+                    <p>HTML tables allow for organizing and displaying data in rows and columns. Using the <code>&lt;table&gt;</code>, <code>&lt;tr&gt;</code>, <code>&lt;th&gt;</code>, and <code>&lt;td&gt;</code> elements, you can create tables.</p>
+                    <h3>Table Structure</h3>
+                    <pre><code>&lt;table&gt;
+    &lt;tr&gt;
+        &lt;th&gt;Header 1&lt;/th&gt;
+        &lt;th&gt;Header 2&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;Data 1&lt;/td&gt;
+        &lt;td&gt;Data 2&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+                    <h3>Task</h3>
+                    <p>Create a table that contains several rows and columns, and add data to it.</p>
+                </section>
+
+                <section class="lesson fade" id="lesson9">
+                    <h2>Lesson 9: HTML Lists</h2>
+                    <p>HTML lists allow for organizing content into ordered and unordered lists. The <code>&lt;ul&gt;</code> element is used for unordered lists, and the <code>&lt;ol&gt;</code> element is used for ordered lists.</p>
+                    <h3>Creating Lists</h3>
+                    <pre><code>&lt;ul&gt;
+    &lt;li&gt;Item 1&lt;/li&gt;
+    &lt;li&gt;Item 2&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+                    <h3>Task</h3>
+                    <p>Create ordered and unordered lists. Add several items to each list.</p>
+                </section>
+
+                <section class="lesson fade" id="lesson10">
+                    <h2>Lesson 10: HTML Iframes</h2>
+                    <p>The <code>&lt;iframe&gt;</code> element is used to embed another HTML page within the current page. Iframes are useful for embedding external content, such as videos or interactive maps.</p>
+                    <h3>Using Iframes</h3>
+                    <pre><code>&lt;iframe src="https://www.example.com" width="600" height="400"&gt;&lt;/iframe&gt;</code></pre>
+                    <h3>Task</h3>
+                    <p>Create an HTML page that embeds another page using the iframe element. Adjust the width and height attributes as needed.</p>
+                </section>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>HTML Lessons © 2024</p>
+    </footer>
+    <script src="lesson.js"></script>
+</body>
+</html>

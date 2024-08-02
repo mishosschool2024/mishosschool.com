@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML გაკვეთილები</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('https://example.com/background.jpg'); /* Change to your preferred background image */
+            background-size: cover;
+            color: #333;
+        }
+
+        h1, h2, h3 {
+            color: #007BFF;
+            text-align: center;
+        }
+
+        .lesson {
+            display: none;
+            padding: 20px;
+            margin: 20px;
+            border: 2px solid #007BFF;
+            border-radius: 8px;
+            background-color: rgba(255, 255, 255, 0.9);
+        }
+
+        .lesson p {
+            font-size: 1.2em;
+        }
+
+        .navigation-buttons {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 1.2em;
+            margin: 0 10px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            background-color: #007BFF;
+            color: white;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>HTML გაკვეთილები</h1>
+    </header>
+    <main>
+        <div class="lesson-container">
+            <div class="navigation-buttons">
+                <button onclick="showLessons(1)">პირველი 5 გაკვეთილი</button>
+                <button onclick="showLessons(2)">მეორე 5 გაკვეთილი</button>
+                <button onclick="showLessons(3)">მესამე 5 გაკვეთილი</button>
+                <button onclick="showLessons(4)">მეოთხე 5 გაკვეთილი</button>
+            </div>
+            <div class="lessons">
+                <!-- First 5 Lessons -->
+                <section class="lesson fade" id="lesson1">
+                    <h2>გაკვეთილი 1: HTML-ის შესავალი</h2>
+                    <p>HTML (Hypertext Markup Language) არის მარკაპის ენა, რომელიც გამოიყენება ვებსაიტების შექმნისთვის. HTML-ის მეშვეობით შეგიძლიათ მოაწყოთ და ფორმატირება გაუკეთოთ ტექსტს, სურათებს და სხვა ელემენტებს. HTML არის ვებსაიტის რბილული, რომელიც განსაზღვრავს მის სტრუქტურას და შინაარსს.</p>
+                    <h3>რა არის HTML?</h3>
+                    <p>HTML არის სტანდარტული ენა, რომლის მეშვეობითაც შეიძლება ვებსაიტების შექმნა და მართვა. HTML-ის გასწორება მოითხოვს ფორმატირებული შინაარსის და ვიზუალური დიზაინის შექმნას, რაც მნიშვნელოვანია მომხმარებლებისთვის მარტივად გასაგები და მიმზიდველი ვებსაიტების შექმნისათვის.</p>
+                    <h3>HTML-ის სტრუქტურა</h3>
+                    <p>HTML დოკუმენტი იწყება <code>&lt;!DOCTYPE html&gt;</code> და შემდეგ <code>&lt;html&gt;</code> ტეგით, რაც აღნიშნავს HTML-ის ვერსიას. HTML-ის გვერდი უნდა შეიცავდეს <code>&lt;head&gt;</code> და <code>&lt;body&gt;</code> ნაწილებს. <code>&lt;head&gt;</code> შეიცავს ინფორმაციას გვერდზე, ხოლო <code>&lt;body&gt;</code> არის ის ნაწილი, რომელიც გამოჩნდება მომხმარებლის ეკრანზე.</p>
+                    <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;ჩემი პირველი ვებსაიტი&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;h1&gt;გამარჯობა მსოფლიო&lt;/h1&gt;
+        &lt;p&gt;ეს არის ჩემი პირველი HTML გვერდი!&lt;/p&gt;
+    &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                    <h3>დავალება</h3>
+                    <p>შექმენით მარტივი HTML ფაილი, რომელიც შეიცავს ტექსტურ შინაარსს და შეინახეთ იგი .html ფორმატში. გამოიყენეთ ზემოთ მოცემული მაგალითი, რათა შექმნათ საკუთარი HTML გვერდი.</p>
+                </section>
+
+                <section class="lesson fade" id="lesson2">
+                    <h2>გაკვეთილი 2: HTML-ის ელემენტები</h2>
+                    <p>HTML-ის ელემენტები არიან ძირითადი კომპონენტები, რომლებიც გამოიყენება ვებსაიტების შექმნაში. თითოეული ელემენტი შეიცავს გახსნის და დახურვის ტეგებს, მაგალითად <code>&lt;p&gt;</code> და <code>&lt;/p&gt;</code>.</p>
+                    <h3>ელემენტების ტიპები</h3>
+                    <ul>
+                        <li><strong>ბლოკური ელემენტები:</strong> ეს ელემენტები იწყება ახალ რიგში და ფართო სივრცით იყოფა. მაგალითად, <code>&lt;div&gt;</code>, <code>&lt;p&gt;</code>, <code>&lt;h1&gt;</code>.</li>
+                        <li><strong>inline ელემენტები:</strong> ეს ელემენტები არ იწყებენ ახალ რიგს და თან მყოფ ელემენტებს შორის ფართო სივრცეში მყოფ ადგილას გამოიყენება. მაგალითად, <code>&lt;span&gt;</code>, <code>&lt;a&gt;</code>.</li>
+                    </ul>
+                    <h3>მაგალითი</h3>
+                    <p>აქ არის მარტივი მაგალითი, როგორ უნდა გამოვიყენოთ HTML ელემენტები:</p>
+                    <pre><code>&lt;p&gt;ეს არის ტექსტი, რომელიც მოთავსებულია <strong>ბლოკური ელემენტით&lt;/strong&gt;&lt;/p&gt;</code></pre>
+                    <h3>დავალება</h3>
+                    <p>შექმენით რამდენიმე ბლოკური და inline ელემენტი. დაწერეთ თავისი სახელები და ასაკი HTML-ის გვერდზე, რაც გამოიყენებს <code>&lt;ul&gt;</code> და <code>&lt;li&gt;</code> ელემენტებს.</p>
+                </section>
+
+                <section class="lesson fade" id="lesson3">
+                    <h2>გაკვეთილი 3: HTML-ის ატრიბუტები</h2>
+                    <p>HTML-ის ატრიბუტები ემატება ელემენტებზე, რათა მათ უფრო მეტი ინფორმაცია მიაწვდოს. ატრიბუტების დამატება საშუალებას გაწვდოს მომხმარებლებს მეტი დეტალების, როგორიცაა სურათების პარამეტრები, ვებსაიტზე გადასვლის ბმულები და სხვა.</p>
+                    <h3>ატრიბუტების გამოყენება</h3>
+                    <pre><code>&lt;a href="https://www.example.com"&gt;ეს არის ლინკი&lt;/a&gt;</code></pre>
+                    <h3>მაგალითი</h3>
+                    <p>ატრიბუტების დამატების მაგალითი:</p>
+                    <pre><code>&lt;img src="image.jpg" alt="ეს არის სურათი"&gt;</code></pre>
+                    <h3>დავალება</h3>
+                    <p>დაამატეთ ატრიბუტები თქვენს HTML ელემენტებზე. შექმენით HTML გვერდი, რომელიც შეიცავს სურათებს და ლინკებს.</p>
+                </section>
+
+                <section class="lesson fade" id="lesson4">
+                    <h2>გაკვეთილი 4: HTML-ის ფორმები</h2>
+                    <p>HTML ფორმები საშუალებას გაწვდოს მომხმარებლის ინფორმაციების შეგროვების. ფორმები ძირითადად გამოიყენება მომხმარებლის ინფორმაციების შეგროვებისთვის, როგორიცაა სახელი, ელექტრონული ფოსტა და სხვა. ფორმა შეიძლება შეიცავდეს რამდენიმე ელემენტს, როგორიცაა ტექსტური ველები, რადიო ღილაკები და ღილაკები.</p>
+                    <h3>ფორმის სტრუქტურა</h3>
+                    <pre><code>&lt;form action="url" method="GET/POST"&gt;
+    &lt;input type="text" name="username"&gt;
+    &lt;input type="submit" value="გაგზავნა"&gt;
+&lt;/form&gt;</code></pre>
+                    <h3>დავალება</h3>
+                    <p>შექმენით ფორმა, რომელიც ითხოვს სახელს, პაროლს და ელექტრონულ ფოსტას. დაამატეთ ველის დატოვების ბმული, რომელიც შეამოწმებს, რომ ინფორმაცია სწორია.</p>
+                </section>
+
+                <section class="lesson fade" id="lesson5">
+                    <h2>გაკვეთილი 5: HTML-ის სურათები</h2>
+                    <p>HTML სურათების დასამატებლად გამოიყენება <code>&lt;img&gt;</code> ელემენტი. სურათების დამატება ვებსაიტზე მნიშვნელოვნად აუმჯობესებს ვიზუალურ მხარეს და შესაძლებელია სხვა შინაარსის დამატება.</p>
+                    <h3>სურათის ატრიბუტები</h3>
+                    <p>სურათზე დამატების ატრიბუტებია:</p>
+                    <ul>
+                        <li><strong>src:</strong> მიუთითებს სურათის წყაროს.</li>
+                        <li><strong>alt:</strong> შეიცავს ტექსტურ აღწერას, რომელიც გამოჩნდება სურათის ნაცვლად, თუ სურათი არ იტვირთება.</li>
+                    </ul>
+                    <h3>მაგალითი</h3>
+                    <pre><code>&lt;img src="image.jpg" alt="ეს არის სურათი"&gt;</code></pre>
+                    <h3>დავალება</h3>
+                    <p>დაამატეთ რამდენიმე სურათი თქვენს HTML გვერდზე. დარწმუნდით, რომ გამოყენებული ატრიბუტები სწორად არიან ჩამოყალიბებული.</p>
+                </section>
+
+                <!-- Second 5 Lessons -->
+                <section class="lesson fade" id="lesson6">
+                    <h2>გაკვეთილი 6: HTML-ის ლინკები</h2>
+                    <p>HTML ლინკების დასამატებლად გამოიყენება <code>&lt;a&gt;</code> ელემენტი. ლინკები საშუალებას გაწვდოს მომხმარებლებს გადადონ სხვა გვერდებზე ან ვებსაიტებზე. ლინკის ელემენტში ატრიბუტები, როგორიცაა <code>href</code>, მიუთითებს ლინკის მიზანს.</p>
+                    <h3>ლინკის გამოყენება</h3>
+                    <pre><code>&lt;a href="https://www.example.com"&gt;ეს არის ლინკი&lt;/a&gt;</code></pre>
+                    <h3>დავალება</h3>
+                    <p>შექმენით რამდენიმე ლინკი, რომლებიც მიუთითებენ სხვადასხვა ვებსაიტებზე. დაამატეთ ლინკები თქვენს მიერ შექმნილ გვერდზე.</p>
+                </section>
+
+                <section class="lesson fade" id="lesson7">
+                    <h2>გაკვეთილი 7: HTML-ის სექციები</h2>
+                    <p>HTML-ის სექციები, როგორიცაა <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;main&gt;</code>, <code>&lt;footer&gt;</code>, გამოყენებულია შინაარსის ორგანიზებისთვის. ეს ელემენტები განსაზღვრავენ ვებსაიტის სხვადასხვა ნაწილებს.</p>
+                    <h3>მაგალითი</h3>
+                    <pre><code>&lt;header&gt;
+    &lt;h1&gt;ეს არის სათაური&lt;/h1&gt;
+&lt;/header&gt;</code></pre>
+                    <h3>დავალება</h3>
+                    <p>შექმენით HTML გვერდი, რომელიც იყენებს სექციების ელემენტებს. განსაზღვრეთ <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;main&gt;</code> და <code>&lt;footer&gt;</code>.</p>
+                </section>
+
+                <section class="lesson fade" id="lesson8">
+                    <h2>გაკვეთილი 8: HTML-ის პალიტრა</h2>
+                    <p>HTML პალიტრა არის ელემენტი, რომელიც გამოიყენება შინაარსის გადანაწილებისთვის. იგი საშუალებას გაწვდოს ჯგუფი სხვადასხვა ელემენტების, როგორიცაა სექციები, სურათები და ტექსტი.</p>
+                    <h3>მაგალითი</h3>
+                    <pre><code>&lt;div&gt;ეს არის პალიტრა&lt;/div&gt;</code></pre>
+                    <h3>დავალება</h3>
+                    <p>შექმენით რამდენიმე პალიტრა თქვენს HTML გვერდზე. შეეცადეთ მოაწყოთ სხვადასხვა ელემენტები, რათა გააოგნოთ ვიზუალური ეფექტი.</p>
+                </section>
+
+                <section class="lesson fade" id="lesson9">
+                    <h2>გაკვეთილი 9: HTML-ის ცხრილები</h2>
+                    <p>HTML ცხრილები გამოიყენება მონაცემების ორგანიზებისთვის. ცხრილები საშუალებას გაწვდოს informations-ის ორგანიზება და ჩაწყობა, რაც ხელს უწყობს მათ სურათების და მონაცემების ადვილად გასაგებად წარმოდგენას.</p>
+                    <h3>მაგალითი</h3>
+                    <pre><code>&lt;table&gt;
+    &lt;tr&gt;
+        &lt;th&gt;სახელი&lt;/th&gt;
+        &lt;th&gt;ასაკი&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;გიო&lt;/td&gt;
+        &lt;td&gt;25&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+                    <h3>დავალება</h3>
+                    <p>შექმენით ცხრილი, რომელიც შეიცავს რამდენიმე რეგისტრირებულ მონაცემს. დაამატეთ უფრო მეტი ხაზი და სვეტი.</p>
+                </section>
+
+                <section class="lesson fade" id="lesson10">
+                    <h2>გაკვეთილი 10: HTML-ის მრავალფეროვნება</h2>
+                    <p>HTML-ის მარკაპი შეიძლება შეიცავდეს უამრავ ელემენტს, რაც თქვენს ვებსაიტს უფრო საინტერესოს და ფუნქციონალურ ხდის. HTML-ის მარკაპი საშუალებას გაწვდოს მომხმარებლებს გადაადგილება თქვენს ვებსაიტზე და მიიღონ საჭირო ინფორმაცია.</p>
+                    <h3>მაგალითი</h3>
+                    <pre><code>&lt;div&gt;ეს არის მრავალფეროვანი მარკაპი&lt;/div&gt;</code></pre>
+                    <h3>დავალება</h3>
+                    <p>შექმენით თქვენი HTML გვერდი, რომელშიც მრავალფეროვანი ელემენტებია. გაატარე ექსპერიმენტები სხვადასხვა ელემენტების კომბინაციით.</p>
+                </section>
+
+                <!-- Third 5 Lessons -->
+                <section class="lesson fade" id="lesson11">
+                    <h2>გაკვეთილი 11: HTML-ის სექციის ელემენტები</h2>
+                    <p>HTML-ში არსებობს სხვადასხვა სექციის ელემენტები, როგორიცაა <code>&lt;section&gt;</code>, <code>&lt;article&gt;</code>, და <code>&lt;aside&gt;</code>, რომლებიც გამოიყენება შინაარსის კონტექსტual ორგანიზებისთვის. ეს ელემენტები მნიშვნელოვანი ხდის ვებსაიტის გამართულობას და შინაარსის ეფექტურ წარმოსახვას.</p>
+                    <h3>მაგალითი</h3>
+                    <pre><code>&lt;section&gt;
+    &lt;h2&gt;ეს არის სექცია&lt;/h2&gt;
+    &lt;p&gt;შინაარსი აქ იქნება&lt;/p&gt;
+&lt;/section&gt;</code></pre>
+                    <h3>დავალება</h3>
+                    <p>შექმენით რამდენიმე სექცია HTML გვერდზე და მოაწყვეთ თქვენი შინაარსი.</p>
+                </section>
+
+                <section class="lesson fade" id="lesson12">
+                    <h2>გაკვეთილი 12: HTML-ის ნავიგაცია</h2>
+                    <p>HTML-ის ნავიგაციის ელემენტებია <code>&lt;nav&gt;</code>, რომელიც გამოიყენება ვებსაიტზე ლინკების ჯგუფირებისათვის. ეს ხელს უწყობს მომხმარებლებს უკეთესად გადაადგილებაში და შეტყობინებების გაცნობაში.</p>
+                    <h3>მაგალითი</h3>
+                    <pre><code>&lt;nav&gt;
+    &lt;ul&gt;
+        &lt;li&gt;&lt;a href="#home"&gt;მთავარი&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#about"&gt;მარტივად&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/nav&gt;</code></pre>
+                    <h3>დავალება</h3>
+                    <p>შექმენით ნავიგაციის მენიუ თქვენს HTML გვერდზე და დაამატეთ ლინკები სხვა სექციებზე.</p>
+                </section>
+
+                <section class="lesson fade" id="lesson13">
+                    <h2>გაკვეთილი 13: HTML-ის მარკაპი</h2>
+                    <p>HTML მარკაპი საშუალებას გაწვდოს შინაარსის ორგანიზება და სტრუქტურა. სხვადასხვა ელემენტების კომბინაცია შექმნის ლამაზ და ფუნქციონალურ ვებსაიტს. HTML-ის მარკაპის სწორად გამოყენება მნიშვნელოვანია ვებსაიტის ოპტიმიზაციისთვის.</p>
+                    <h3>მაგალითი</h3>
+                    <pre><code>&lt;header&gt;
+    &lt;h1&gt;ეს არის ჩემი ვებსაიტი&lt;/h1&gt;
+&lt;/header&gt;</code></pre>
+                    <h3>დავალება</h3>
+                    <p>შექმენით HTML გვერდი, რომელიც მოიცავს ყველა მარკაპის ელემენტს. დაამატეთ სექციები, პარაგრაფები და ლინკები.</p>
+                </section>
+
+                <section class="lesson fade" id="lesson14">
+                    <h2>გაკვეთილი 14: HTML-ის ეთიკეტი</h2>
+                    <p>HTML-ის ეთიკეტი მოიცავს კოდირების წესებს, რომლებიც უნდა გაითვალისწინოთ თქვენი HTML გვერდების შექმნის დროს. კარგ ეთიკეტს ასახავს კოდის სუფთა და გასაგები სტრუქტურა, რაც ზრდის კოდის გაწვდულობას.</p>
+                    <h3>მაგალითი</h3>
+                    <pre><code>&lt;h1&gt;გამარჯობა&lt;/h1&gt;</code></pre>
+                    <h3>დავალება</h3>
+                    <p>წარმოიდგინეთ თქვენი HTML კოდის ორგანიზება. შექმენით ჩარჩო, რომელშიც იყენებთ საუკეთესო პრაქტიკას.</p>
+                </section>
+
+                <section class="lesson fade" id="lesson15">
+                    <h2>გაკვეთილი 15: HTML-ის თვალთახედვა</h2>
+                    <p>HTML-ის თვალთახედვა მოიცავს ინფორმაციების ვიზუალური განლაგების შესაძლებლობას. ეს საშუალებას გაწვდოს მომხმარებლებს უფრო მარტივად გასაგები და დალაგებული ვებსაიტები.</p>
+                    <h3>მაგალითი</h3>
+                    <pre><code>&lt;p&gt;ეს არის ჩემი ვებსაიტის პირველი გვერდი&lt;/p&gt;</code></pre>
+                    <h3>დავალება</h3>
+                    <p>შექმენით HTML გვერდი, რომელშიც თვალთახედვის ელემენტები შეიმუშავეთ.</p>
+                </section>
+
+                <!-- Fourth 5 Lessons -->
+                <section class="lesson fade" id="lesson16">
+                    <h2>გაკვეთილი 16: HTML-ის გამოყენება პროგრამირებაში</h2>
+                    <p>HTML არის ვებსაიტების მარკაპის ენა, რომელიც მნიშვნელოვან როლს თამაშობს პროგრამირების სფეროში. HTML-ის სწორად გამოყენება პროგრამისტებს სჭირდებათ იმისათვის, რომ მოახდინონ კოდირების ეფექტური და სწორად ორგანიზებული.</p>
+                    <h3>მაგალითი</h3>
+                    <pre><code>&lt;div&gt;ეს არის HTML-ის პროგრამირების მაგალითი&lt;/div&gt;</code></pre>
+                    <h3>დავალება</h3>
+                    <p>შექმენით HTML გვერდი, რომელიც აერთიანებს სხვადასხვა პროგრამირების ელემენტებს, როგორიცაა JavaScript და CSS.</p>
+                </section>
+
+                <section class="lesson fade" id="lesson17">
+                    <h2>გაკვეთილი 17: HTML-ის მარკაპის სწორი გამოყენება</h2>
+                    <p>HTML მარკაპის სწორად გამოყენება აუცილებელია ვებსაიტების ოპტიმიზაციისთვის და სერვერის სწრაფი რეაგირებისთვის. ეს ასევე ხელს უწყობს მომხმარებლის გამოცდილების გაუმჯობესებას.</p>
+                    <h3>მაგალითი</h3>
+                    <pre><code>&lt;article&gt;
+    &lt;h2&gt;ეს არის სტატიის სათაური&lt;/h2&gt;
+    &lt;p&gt;სტატიის შინაარსი აქ იქნება&lt;/p&gt;
+&lt;/article&gt;</code></pre>
+                    <h3>დავალება</h3>
+                    <p>შექმენით HTML გვერდი, რომელიც შეიცავს მარკაპის ელემენტებს და სწორად ორგანიზებულ შინაარსს.</p>
+                </section>
+
+                <section class="lesson fade" id="lesson18">
+                    <h2>გაკვეთილი 18: HTML-ის გამოყენება SEO-ში</h2>
+                    <p>HTML-ის სწორად გამოყენება ეხმარება ვებსაიტების SEO ოპტიმიზაციისთვის. მარკაპის სწორად გამოყენება, როგორიცაა <code>&lt;title&gt;</code>, <code>&lt;meta&gt;</code> და <code>&lt;header&gt;</code>, მნიშვნელოვნად ეხმარება ვებსაიტის სინდუქტივობის გაუმჯობესებას.</p>
+                    <h3>მაგალითი</h3>
+                    <pre><code>&lt;meta name="description" content="ეს არის ჩემი ვებსაიტი"&gt;</code></pre>
+                    <h3>დავალება</h3>
+                    <p>შექმენით HTML გვერდი, რომელიც შეიცავს SEO ოპტიმიზაციისთვის საჭირო ატრიბუტებს.</p>
+                </section>
+
+                <section class="lesson fade" id="lesson19">
+                    <h2>გაკვეთილი 19: HTML-ის სექციების სწორი ორგანიზება</h2>
+                    <p>HTML-ის სექციების სწორად ორგანიზება საჭიროა ვებსაიტის ვიზუალური დალაგებისა და შინაარსის სასარგებლოდ. სწორად ორგანიზებული HTML სტრუქტურა იმსახურებს მომხმარებლის ყურადღებას.</p>
+                    <h3>მაგალითი</h3>
+                    <pre><code>&lt;footer&gt;
+    &lt;p&gt;© 2024 ჩემი ვებსაიტი&lt;/p&gt;
+&lt;/footer&gt;</code></pre>
+                    <h3>დავალება</h3>
+                    <p>შექმენით HTML გვერდი, რომელშიც სწორად ორგანიზებული სექციებია, რათა მომხმარებლებს მარტივად შეძლონ ვებსაიტზე გადაადგილება.</p>
+                </section>
+
+                <section class="lesson fade" id="lesson20">
+                    <h2>გაკვეთილი 20: HTML-ის ტესტირება და შეცდომების გადატანა</h2>
+                    <p>HTML-ის კოდის ტესტირება და შეცდომების გადატანა მნიშვნელოვანია იმისათვის, რომ მომხმარებლები მაქსიმალურად კომფორტულად და ეფექტურად შეძლონ ვებსაიტის გამოყენება. HTML-ის შეცდომების მეშვეობით გაწვდილი კოდი უნდა იყოს სუფთა და სწორად ფორმატირებული.</p>
+                    <h3>მაგალითი</h3>
+                    <pre><code>&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;გამარჯობა&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;p&gt;ეს არის HTML-ის ტესტირება&lt;/p&gt;
+    &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                    <h3>დავალება</h3>
+                    <p>შექმენით HTML გვერდი და გამართეთ იგი, რათა გამოავლინოთ რაიმე შეცდომები. ისწავლეთ HTML-ის ტესტირების ტექნიკები და გაიგეთ, როგორ უნდა გადაიტანოთ შეცდომები.</p>
+                </section>
+
+                <!-- Navigation Buttons -->
+                <div class="navigation-buttons">
+                    <button onclick="previousLessons()">წინა გაკვეთილი</button>
+                    <button onclick="nextLessons()">შემდეგი გაკვეთილი</button>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>© 2024 HTML გაკვეთილები</p>
+    </footer>
+
+    <script>
+        let currentLessonSet = 1;
+
+        function showLessons(set) {
+            currentLessonSet = set;
+            const lessons = document.querySelectorAll('.lesson');
+            lessons.forEach((lesson, index) => {
+                lesson.style.display = (Math.floor(index / 5) + 1 === currentLessonSet) ? 'block' : 'none';
+            });
+        }
+
+        function previousLessons() {
+            if (currentLessonSet > 1) {
+                showLessons(currentLessonSet - 1);
+            }
+        }
+
+        function nextLessons() {
+            if (currentLessonSet < 4) {
+                showLessons(currentLessonSet + 1);
+            }
+        }
+
+        // Initial load
+        showLessons(1);
+    </script>
+</body>
+</html>
